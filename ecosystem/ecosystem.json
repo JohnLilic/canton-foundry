@@ -9,11 +9,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "ACME",
@@ -24,11 +27,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "BitSafe",
@@ -39,11 +45,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "Thetanuts Finance",
@@ -54,11 +63,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "LendOS",
@@ -69,11 +81,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "Cantara",
@@ -84,11 +99,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "5N Loop",
@@ -99,11 +117,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Bron",
@@ -114,11 +135,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "C8 Wallet",
@@ -129,11 +153,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Moonshot",
@@ -144,11 +171,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Cypherock",
@@ -159,11 +189,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Nightly",
@@ -174,11 +207,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "CantonScan",
@@ -189,11 +225,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "CC Explorer",
@@ -204,11 +243,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "5N Lighthouse",
@@ -219,11 +261,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Sync Insights",
@@ -234,11 +279,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Coin Metrics Canton Intelligence",
@@ -249,11 +297,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Amberdata",
@@ -264,11 +315,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Flipside Crypto",
@@ -279,11 +333,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Kaiko",
@@ -294,11 +351,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Nansen",
@@ -309,11 +369,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Noves",
@@ -324,11 +387,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Maestro",
@@ -339,11 +405,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Blockdaemon",
@@ -354,11 +423,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Kiln",
@@ -369,11 +441,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "P2P",
@@ -384,11 +459,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Figment",
@@ -399,11 +477,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Everstake",
@@ -414,11 +495,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "DSRV",
@@ -429,11 +513,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Launchnodes",
@@ -444,11 +531,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Edgevana",
@@ -459,11 +549,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "GlobalStake",
@@ -474,11 +567,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Finoa",
@@ -489,11 +585,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Luganodes",
@@ -504,11 +603,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "GatewayFM",
@@ -519,11 +621,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Node Monster",
@@ -534,11 +639,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Komonode",
@@ -549,11 +657,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Canton Nodes",
@@ -564,11 +675,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Proof Group",
@@ -579,11 +693,16 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
-      "relatedTo": ["CantonScan"],
+      "stack": [
+        "canton-3x"
+      ],
+      "relatedTo": [
+        "CantonScan"
+      ],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Chainlink",
@@ -594,11 +713,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "LayerZero",
@@ -609,11 +731,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Wormhole",
@@ -624,11 +749,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Ownera",
@@ -639,11 +767,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Houdini Swap",
@@ -654,11 +785,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Asterizm Collateral Bridge",
@@ -669,11 +803,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "AgenticLedger / Canty",
@@ -684,11 +821,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "1Pilot",
@@ -699,11 +839,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "BMCP Invest",
@@ -714,11 +857,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": true
     },
     {
       "name": "T-RIZE",
@@ -729,11 +875,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "Texture Capital",
@@ -744,11 +893,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "7Trust by C7",
@@ -759,26 +911,36 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "canton-patterns",
-      "description": "OpenZeppelin for Daml — 6 audited contract patterns, 45 tests",
+      "description": "OpenZeppelin for Daml \u2014 6 audited contract patterns, 45 tests",
       "category": "DevTools",
       "url": "https://github.com/JohnLilic/canton-patterns",
       "github": "https://github.com/JohnLilic/canton-patterns",
       "status": "live",
       "openSource": true,
       "cantonFoundry": true,
-      "stack": ["daml", "canton-2x"],
-      "relatedTo": ["create-canton-app", "canton-ci-templates"],
+      "stack": [
+        "daml",
+        "canton-2x"
+      ],
+      "relatedTo": [
+        "create-canton-app",
+        "canton-ci-templates"
+      ],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-16"
+      "addedDate": "2026-02-16",
+      "featuredApp": null
     },
     {
       "name": "create-canton-app",
@@ -789,11 +951,18 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": true,
-      "stack": ["typescript", "daml"],
-      "relatedTo": ["canton-patterns", "canton-ci-templates"],
+      "stack": [
+        "typescript",
+        "daml"
+      ],
+      "relatedTo": [
+        "canton-patterns",
+        "canton-ci-templates"
+      ],
       "installCommand": "npx create-canton-app myapp",
       "mcpConfig": null,
-      "addedDate": "2026-02-16"
+      "addedDate": "2026-02-16",
+      "featuredApp": null
     },
     {
       "name": "canton-ci-templates",
@@ -804,11 +973,17 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": true,
-      "stack": ["daml"],
-      "relatedTo": ["canton-patterns", "create-canton-app"],
+      "stack": [
+        "daml"
+      ],
+      "relatedTo": [
+        "canton-patterns",
+        "create-canton-app"
+      ],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-16"
+      "addedDate": "2026-02-16",
+      "featuredApp": null
     },
     {
       "name": "canton-mcp-server",
@@ -819,11 +994,15 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": true,
-      "stack": ["typescript", "grpc"],
+      "stack": [
+        "typescript",
+        "grpc"
+      ],
       "relatedTo": [],
       "installCommand": "npm install -g canton-mcp-server",
       "mcpConfig": "{\"mcpServers\":{\"canton\":{\"command\":\"npx\",\"args\":[\"-y\",\"canton-mcp-server\"],\"env\":{\"CANTON_USE_MOCK\":\"true\"}}}}",
-      "addedDate": "2026-02-16"
+      "addedDate": "2026-02-16",
+      "featuredApp": null
     },
     {
       "name": "Canton Developer Guide",
@@ -834,11 +1013,17 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": true,
-      "stack": ["daml"],
-      "relatedTo": ["canton-patterns", "create-canton-app"],
+      "stack": [
+        "daml"
+      ],
+      "relatedTo": [
+        "canton-patterns",
+        "create-canton-app"
+      ],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-16"
+      "addedDate": "2026-02-16",
+      "featuredApp": null
     },
     {
       "name": "Daml SDK",
@@ -849,11 +1034,24 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": false,
-      "stack": ["daml", "java", "typescript", "python", "grpc", "json-api", "canton-2x", "canton-3x"],
-      "relatedTo": ["create-canton-app", "canton-patterns"],
+      "stack": [
+        "daml",
+        "java",
+        "typescript",
+        "python",
+        "grpc",
+        "json-api",
+        "canton-2x",
+        "canton-3x"
+      ],
+      "relatedTo": [
+        "create-canton-app",
+        "canton-patterns"
+      ],
       "installCommand": "curl -sSL https://get.daml.com/ | sh",
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "cn-quickstart",
@@ -864,11 +1062,20 @@
       "status": "live",
       "openSource": true,
       "cantonFoundry": false,
-      "stack": ["daml", "java", "typescript", "canton-3x"],
-      "relatedTo": ["create-canton-app", "Daml SDK"],
+      "stack": [
+        "daml",
+        "java",
+        "typescript",
+        "canton-3x"
+      ],
+      "relatedTo": [
+        "create-canton-app",
+        "Daml SDK"
+      ],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "AppsFactory",
@@ -879,11 +1086,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Bitwave",
@@ -894,11 +1104,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     },
     {
       "name": "Denex",
@@ -909,11 +1122,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": false
     },
     {
       "name": "Particula",
@@ -924,11 +1140,14 @@
       "status": "live",
       "openSource": false,
       "cantonFoundry": false,
-      "stack": ["canton-3x"],
+      "stack": [
+        "canton-3x"
+      ],
       "relatedTo": [],
       "installCommand": null,
       "mcpConfig": null,
-      "addedDate": "2026-02-01"
+      "addedDate": "2026-02-01",
+      "featuredApp": null
     }
   ]
 }

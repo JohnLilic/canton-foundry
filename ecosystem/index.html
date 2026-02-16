@@ -427,6 +427,37 @@
       background: var(--accent-dim);
       border: 1px solid rgba(200, 164, 69, 0.3);
     }
+    .badge-featured {
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(200, 164, 69, 0.3);
+      cursor: help;
+      position: relative;
+    }
+    .badge-featured .star {
+      margin-right: 2px;
+    }
+    .badge-featured .tip {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      width: 280px;
+      padding: 10px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: var(--sans);
+      line-height: 1.5;
+      color: var(--dim);
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: normal;
+      z-index: 60;
+      pointer-events: none;
+    }
+    .badge-featured:hover .tip { display: block; }
     .card-cat {
       font-size: 11px;
       color: var(--faint);
@@ -528,7 +559,8 @@
       border-right: 1px solid var(--border);
     }
     .gap-card:nth-child(2n) { border-right: none; }
-    .gap-card:nth-last-child(-n+2) { border-bottom: none; }
+    .gap-card:last-child { border-bottom: none; }
+    .gap-card:nth-last-child(2):nth-child(odd) { border-bottom: none; }
     .gap-card h3 {
       font-size: 14px;
       font-weight: 500;
@@ -773,6 +805,11 @@
           <p>A marketplace for minting and trading unique digital assets on Canton.</p>
           <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+NFT+Marketplace" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
         </div>
+        <div class="gap-card">
+          <h3>FeaturedAppActivityMarker Helper</h3>
+          <p>No open-source library exists to simplify integrating FeaturedAppActivityMarker into Daml contracts. Developers must manually query the FeaturedAppRight interface (package ID 7804375fe...) and create markers for each qualifying transaction.</p>
+          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+FeaturedAppActivityMarker+Helper" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
+        </div>
       </div>
     </div>
   </div>
@@ -842,7 +879,7 @@
 
     /* Categories & stacks */
     var CATEGORIES = [
-      'All', 'DeFi', 'Wallets', 'DevTools', 'Analytics',
+      'All', 'Featured Apps', 'DeFi', 'Wallets', 'DevTools', 'Analytics',
       'Bridges', 'AI', 'Tokenization', 'NaaS',
       'Infrastructure', 'Lending', 'DEX', 'Payments', 'Identity'
     ];
@@ -924,7 +961,9 @@
     /* Filter & render */
     function getFiltered() {
       var filtered = projects.filter(function(p) {
-        if (activeCategory !== 'All' && p.category !== activeCategory) return false;
+        if (activeCategory === 'Featured Apps') {
+          if (p.featuredApp !== true) return false;
+        } else if (activeCategory !== 'All' && p.category !== activeCategory) return false;
         if (searchQuery) {
           var hay = (p.name + ' ' + p.description).toLowerCase();
           if (hay.indexOf(searchQuery) === -1) return false;
@@ -954,6 +993,7 @@
       else html += '<span class="badge badge-coming-soon">Soon</span>';
       if (p.openSource) html += '<span class="badge badge-oss">OSS</span>';
       if (p.cantonFoundry) html += '<span class="badge badge-cf">Canton Foundry</span>';
+      if (p.featuredApp === true) html += '<span class="badge badge-featured"><span class="star">\u2605</span>Featured App<span class="tip">Earns Canton Coin rewards via FeaturedAppActivityMarker \u2014 apps receive ~$1 additional minting weight per economically important transaction</span></span>';
       html += '</div></div>';
 
       html += '<div class="card-cat">' + esc(p.category) + '</div>';
