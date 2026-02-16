@@ -24,9 +24,24 @@
       --text: #e0e0e0;
       --dim: #777;
       --faint: #444;
+      --hover: #fff;
+      --nav-bg: rgba(12, 12, 12, 0.85);
+      --copied: #6b7;
       --mono: 'JetBrains Mono', monospace;
       --sans: 'Inter', -apple-system, sans-serif;
       --max-w: 720px;
+    }
+
+    html.light {
+      --bg: #fafafa;
+      --surface: #f0f0f0;
+      --border: #ddd;
+      --text: #1a1a1a;
+      --dim: #666;
+      --faint: #999;
+      --hover: #000;
+      --nav-bg: rgba(250, 250, 250, 0.85);
+      --copied: #2a7;
     }
 
     html { scroll-behavior: smooth; }
@@ -41,7 +56,7 @@
     }
 
     a { color: var(--text); text-decoration: none; }
-    a:hover { color: #fff; }
+    a:hover { color: var(--hover); }
 
     .wrap {
       max-width: var(--max-w);
@@ -59,7 +74,7 @@
       height: 52px;
       display: flex;
       align-items: center;
-      background: rgba(12, 12, 12, 0.85);
+      background: var(--nav-bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -123,7 +138,7 @@
       letter-spacing: -0.035em;
       line-height: 1.1;
       margin-bottom: 16px;
-      color: #fff;
+      color: var(--hover);
     }
     .hero .tagline {
       font-size: 16px;
@@ -150,7 +165,7 @@
       gap: 6px;
     }
     .hero-links a:first-child { color: var(--text); }
-    .hero-links a:hover { color: #fff; }
+    .hero-links a:hover { color: var(--hover); }
 
     /* Sections */
     section { padding: 80px 0; border-top: 1px solid var(--border); }
@@ -167,7 +182,7 @@
       font-weight: 600;
       letter-spacing: -0.03em;
       margin-bottom: 12px;
-      color: #fff;
+      color: var(--hover);
     }
 
     /* Build grid */
@@ -263,7 +278,7 @@
       justify-content: space-between;
       text-align: left;
     }
-    .acc-trigger:hover { color: #fff; }
+    .acc-trigger:hover { color: var(--hover); }
     .acc-trigger .n {
       font-family: var(--mono);
       font-size: 12px;
@@ -340,7 +355,7 @@
       padding: 2px 6px;
     }
     .copy-btn:hover { color: var(--dim); }
-    .copy-btn.copied { color: #6b7; }
+    .copy-btn.copied { color: var(--copied); }
     .codeblock pre {
       margin: 0;
       padding: 14px 16px;
@@ -456,6 +471,39 @@
       margin: 0 auto;
     }
 
+    /* Theme toggle */
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--dim);
+      cursor: pointer;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+    }
+    .theme-toggle:hover { color: var(--text); }
+    .theme-toggle .icon-sun,
+    .theme-toggle .icon-moon { display: none; }
+    :root .theme-toggle .icon-sun { display: block; }
+    :root .theme-toggle .icon-moon { display: none; }
+    .light .theme-toggle .icon-sun { display: none; }
+    .light .theme-toggle .icon-moon { display: block; }
+
+    /* Prism light mode overrides */
+    html.light .codeblock pre,
+    html.light .codeblock code { color: #1a1a1a; }
+    html.light .codeblock .token.comment { color: #888; }
+    html.light .codeblock .token.keyword { color: #7c3aed; }
+    html.light .codeblock .token.string { color: #16803c; }
+    html.light .codeblock .token.number { color: #b45309; }
+    html.light .codeblock .token.operator { color: #555; }
+    html.light .codeblock .token.punctuation { color: #555; }
+    html.light .codeblock .token.function { color: #2563eb; }
+    html.light .codeblock .token.builtin { color: #7c3aed; }
+    html.light .codeblock .token.class-name { color: #b45309; }
+    html.light .codeblock .token.boolean { color: #b45309; }
+    html.light .codeblock .token.important { color: #dc2626; }
+
     /* Responsive */
     @media (max-width: 640px) {
       .nav-right { display: none; }
@@ -480,7 +528,11 @@
         <a href="#guide">Guide</a>
         <a href="#about">About</a>
         <a href="#resources">Resources</a>
-        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a>
+        <button class="theme-toggle" aria-label="Toggle theme" id="themeToggle">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
       </div>
       <button class="mobile-toggle" aria-label="Menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M4 6h16M4 18h16"/></svg>
@@ -493,7 +545,7 @@
     <a href="#guide">Guide</a>
     <a href="#about">About</a>
     <a href="#resources">Resources</a>
-    <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
   </div>
 
   <div class="hero">
@@ -503,7 +555,7 @@
       <p class="sub">Building developer tools, contract libraries, and applications that strengthen the Canton ecosystem</p>
       <div class="hero-links">
         <a href="#tools">Explore our tools &darr;</a>
-        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="position:relative;top:1px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub &nearr;</a>
       </div>
     </div>
   </div>
@@ -911,6 +963,17 @@ jobs:
     const mm = document.getElementById('mm');
     toggle.addEventListener('click', () => mm.classList.toggle('open'));
     mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+    /* Theme toggle */
+    const themeBtn = document.getElementById('themeToggle');
+    function setTheme(light) {
+      document.documentElement.classList.toggle('light', light);
+      localStorage.setItem('theme', light ? 'light' : 'dark');
+    }
+    if (localStorage.getItem('theme') === 'light') setTheme(true);
+    themeBtn.addEventListener('click', () => {
+      setTheme(!document.documentElement.classList.contains('light'));
+    });
   </script>
 </body>
 </html>
