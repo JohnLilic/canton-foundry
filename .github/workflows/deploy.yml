@@ -23,27 +23,12 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
-      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
-        with:
-          node-version: '22'
-
-      - name: Build Observatory site
-        working-directory: observatory
-        run: |
-          npm ci
-          npx tsx scripts/generate-site.ts
-          mkdir -p ../observatory-pages
-          cp site/index.html ../observatory-pages/index.html
-          cp site/methodology.html ../observatory-pages/methodology.html
-          cp -r site/api ../observatory-pages/api
-
       - name: Assemble site
         run: |
-          mkdir -p _site/ecosystem _site/observatory .github
+          mkdir -p _site/ecosystem
           cp index.html _site/
           cp CNAME _site/ 2>/dev/null || true
-          cp -r ecosystem/index.html ecosystem/ecosystem.json _site/ecosystem/
-          cp -r observatory-pages/* _site/observatory/
+          cp ecosystem/index.html ecosystem/ecosystem.json _site/ecosystem/
 
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
