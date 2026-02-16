@@ -9,7 +9,7 @@
   <meta property="og:description" content="Open-source infrastructure for Canton Network. Developer tools, contract libraries, and applications that strengthen the Canton ecosystem.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cantonfoundry.com">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%23fff'/><rect x='4' y='4' width='24' height='24' rx='2' fill='%23000'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='0' y='16' width='16' height='16' rx='2.5' fill='%23e0e0e0' opacity='0.3'/><rect x='8' y='8' width='16' height='16' rx='2.5' fill='%23e0e0e0' opacity='0.6'/><rect x='16' y='0' width='16' height='16' rx='2.5' fill='%23e0e0e0'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -89,7 +89,11 @@
       font-weight: 600;
       font-size: 14px;
       letter-spacing: -0.02em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
+    .logo-mark { display: flex; }
     .nav-right {
       display: flex;
       align-items: center;
@@ -522,7 +526,7 @@
 
   <nav>
     <div class="wrap">
-      <a href="#" class="nav-left">Canton Foundry</a>
+      <a href="#" class="nav-left"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor"><rect x="0" y="16" width="16" height="16" rx="2.5" opacity="0.25"/><rect x="8" y="8" width="16" height="16" rx="2.5" opacity="0.5"/><rect x="16" y="0" width="16" height="16" rx="2.5"/></svg></span>Canton Foundry</a>
       <div class="nav-right">
         <a href="#tools">Tools</a>
         <a href="#guide">Guide</a>
@@ -930,7 +934,7 @@ jobs:
 
   <footer>
     <div class="footer-inner wrap">
-      <p><a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">Canton Foundry</a></p>
+      <p><a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 32 32" fill="currentColor"><rect x="0" y="16" width="16" height="16" rx="2.5" opacity="0.25"/><rect x="8" y="8" width="16" height="16" rx="2.5" opacity="0.5"/><rect x="16" y="0" width="16" height="16" rx="2.5"/></svg>Canton Foundry</a></p>
       <p>BSD-0-Clause</p>
     </div>
   </footer>
