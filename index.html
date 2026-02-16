@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canton Foundry — Open-source infrastructure for Canton Network</title>
+  <meta name="description" content="Canton Foundry is an open-source venture production studio building developer tools, contract libraries, and applications for Canton Network.">
+  <meta property="og:title" content="Canton Foundry">
+  <meta property="og:description" content="Open-source infrastructure for Canton Network. Developer tools, contract libraries, and applications that strengthen the Canton ecosystem.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cantonfoundry.com">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%234F46E5'/><stop offset='100%25' stop-color='%237C3AED'/></linearGradient></defs><path d='M15 70 L50 55 L85 70 L85 80 L50 65 L15 80Z' fill='url(%23g)'/><path d='M25 45 L75 45 L80 55 L20 55Z' fill='url(%23g)'/><path d='M40 20 L60 20 L62 45 L38 45Z' fill='url(%23g)' opacity='0.8'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-deep: #06060b;
+      --bg-base: #0a0a12;
+      --bg-surface: #10101c;
+      --bg-elevated: #161625;
+      --bg-hover: #1c1c30;
+      --border: rgba(255, 255, 255, 0.06);
+      --border-hover: rgba(255, 255, 255, 0.12);
+      --text-primary: #e4e4ec;
+      --text-secondary: #8585a0;
+      --text-tertiary: #5c5c76;
+      --accent-blue: #4F7DF3;
+      --accent-indigo: #5E54F0;
+      --accent-purple: #7C5AF2;
+      --gradient-start: #4F46E5;
+      --gradient-mid: #6366F1;
+      --gradient-end: #8B5CF6;
+      --success: #34D399;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', -apple-system, sans-serif;
+      --max-w: 1140px;
+      --section-gap: 140px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ─── Noise overlay ─── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── Fade-in animation ─── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in.delay-1 { transition-delay: 0.1s; }
+    .fade-in.delay-2 { transition-delay: 0.2s; }
+    .fade-in.delay-3 { transition-delay: 0.3s; }
+
+    /* ─── Nav ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      background: rgba(6, 6, 11, 0.7);
+      backdrop-filter: blur(20px) saturate(1.3);
+      -webkit-backdrop-filter: blur(20px) saturate(1.3);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    nav .nav-inner {
+      max-width: var(--max-w);
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo svg { width: 22px; height: 22px; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 13.5px;
+      font-weight: 450;
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      letter-spacing: 0.01em;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--text-primary); }
+    .nav-github {
+      color: var(--text-secondary);
+      transition: color 0.2s;
+      display: flex;
+    }
+    .nav-github:hover { color: var(--text-primary); }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      cursor: pointer;
+      padding: 4px;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: rgba(6, 6, 11, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      z-index: 99;
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      color: var(--text-secondary);
+      font-size: 15px;
+      font-weight: 450;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--text-primary); }
+
+    /* ─── Hero ─── */
+    .hero {
+      padding: 180px 0 var(--section-gap);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 20%, transparent 70%);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(79, 70, 229, 0.08) 0%, rgba(124, 58, 242, 0.04) 40%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 76px);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      background: linear-gradient(135deg, #fff 0%, #c4c3f0 50%, var(--accent-purple) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+    .hero .tagline {
+      font-size: clamp(17px, 2.2vw, 20px);
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .hero .subtext {
+      font-size: 15px;
+      color: var(--text-tertiary);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── Buttons ─── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 550;
+      font-family: var(--sans);
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      letter-spacing: 0.01em;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+      color: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 4px 20px rgba(79, 70, 229, 0.35), inset 0 1px 0 rgba(255,255,255,0.1);
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-hover);
+    }
+    .btn-outline:hover {
+      color: var(--text-primary);
+      border-color: rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* ─── Section headers ─── */
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-indigo);
+      margin-bottom: 12px;
+    }
+    .section-header h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .section-header p {
+      font-size: 15.5px;
+      color: var(--text-secondary);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    section { padding: 0 0 var(--section-gap); }
+
+    /* ─── Divider ─── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-hover), transparent);
+      margin-bottom: var(--section-gap);
+    }
+
+    /* ─── What We Build cards ─── */
+    .build-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .build-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px 28px;
+      position: relative;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .build-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.06);
+    }
+    .build-card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.15), rgba(124, 58, 242, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent-indigo);
+    }
+    .build-card h3 {
+      font-size: 16.5px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .build-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      background: rgba(139, 92, 246, 0.12);
+      color: var(--accent-purple);
+      border: 1px solid rgba(139, 92, 246, 0.15);
+      margin-bottom: 16px;
+    }
+
+    /* ─── Tools grid ─── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .tool-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .tool-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 0 40px rgba(99, 102, 241, 0.06);
+    }
+    .tool-card h3 {
+      font-family: var(--mono);
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+    .tool-card .tool-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .tool-card .tool-stats {
+      font-size: 12.5px;
+      color: var(--text-tertiary);
+      font-family: var(--mono);
+      margin-bottom: 18px;
+    }
+    .tool-card .tool-command {
+      font-family: var(--mono);
+      font-size: 13px;
+      background: var(--bg-deep);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--accent-blue);
+      margin-bottom: 18px;
+      overflow-x: auto;
+    }
+    .tool-card .tool-bottom {
+      margin-top: auto;
+    }
+    .tool-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--accent-indigo);
+      transition: gap 0.2s;
+    }
+    .tool-link:hover { gap: 10px; }
+    .tool-link svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.2s;
+    }
+
+    /* ─── Guide ─── */
+    .guide-section {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .accordion-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background: var(--bg-surface);
+      transition: border-color 0.3s;
+    }
+    .accordion-item:hover,
+    .accordion-item.open {
+      border-color: var(--border-hover);
+    }
+    .accordion-trigger {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      padding: 20px 24px;
+      font-family: var(--sans);
+      font-size: 15.5px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+    }
+    .accordion-trigger:hover { color: #fff; }
+    .accordion-trigger .num {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      margin-right: 14px;
+      min-width: 22px;
+    }
+    .accordion-trigger .chevron {
+      color: var(--text-tertiary);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    .accordion-item.open .chevron {
+      transform: rotate(180deg);
+    }
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .accordion-item.open .accordion-body {
+      max-height: 2000px;
+    }
+    .accordion-content {
+      padding: 0 24px 24px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .accordion-content p { margin-bottom: 14px; }
+    .accordion-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+    .accordion-content ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+    }
+    .accordion-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-indigo);
+      opacity: 0.6;
+    }
+    .accordion-content strong { color: var(--text-primary); font-weight: 600; }
+    .accordion-content a.inline-link {
+      color: var(--accent-indigo);
+      border-bottom: 1px solid rgba(94, 84, 240, 0.3);
+      transition: border-color 0.2s;
+    }
+    .accordion-content a.inline-link:hover {
+      border-color: var(--accent-indigo);
+    }
+
+    /* ─── Code blocks ─── */
+    .code-block {
+      position: relative;
+      margin: 16px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid var(--border);
+    }
+    .code-lang {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .copy-btn {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-tertiary);
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .copy-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--border-hover);
+      background: rgba(255,255,255,0.03);
+    }
+    .copy-btn.copied {
+      color: var(--success);
+      border-color: rgba(52, 211, 153, 0.3);
+    }
+    .code-block pre {
+      margin: 0;
+      padding: 18px 20px;
+      background: var(--bg-deep) !important;
+      font-size: 13px;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+    .code-block pre code {
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    /* Prism overrides for our theme */
+    .code-block pre[class*="language-"],
+    .code-block code[class*="language-"] {
+      background: none !important;
+      text-shadow: none !important;
+    }
+
+    /* ─── Deployment path ─── */
+    .deploy-path {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 16px 0;
+    }
+    .deploy-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 14px 0;
+      position: relative;
+    }
+    .deploy-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 42px;
+      bottom: -2px;
+      width: 1px;
+      background: var(--border-hover);
+    }
+    .deploy-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(124, 58, 242, 0.15));
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-indigo);
+      flex-shrink: 0;
+    }
+    .deploy-step-text strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+    .deploy-step-text {
+      font-size: 14px;
+    }
+    .deploy-step-text code {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      background: rgba(255,255,255,0.05);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--accent-blue);
+    }
+
+    /* ─── Pattern list ─── */
+    .pattern-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 16px 0;
+    }
+    .pattern-item {
+      padding: 12px 16px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .pattern-item strong {
+      display: block;
+      font-size: 13.5px;
+      margin-bottom: 2px;
+    }
+    .pattern-item span {
+      font-size: 12.5px;
+      color: var(--text-tertiary);
+    }
+
+    /* ─── About ─── */
+    .about-content {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-content p {
+      font-size: 15.5px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .license-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      padding: 14px 24px;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(124, 58, 242, 0.06));
+      border: 1px solid rgba(99, 102, 241, 0.15);
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+    .license-badge svg {
+      color: var(--accent-indigo);
+      flex-shrink: 0;
+    }
+
+    /* ─── Resources ─── */
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .resource-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    }
+    .resource-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 0 30px rgba(99, 102, 241, 0.05);
+      transform: translateY(-1px);
+    }
+    .resource-card .rc-name {
+      font-size: 14px;
+      font-weight: 550;
+      margin-bottom: 2px;
+    }
+    .resource-card .rc-url {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-family: var(--mono);
+    }
+    .resource-card .rc-arrow {
+      color: var(--text-tertiary);
+      transition: transform 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .resource-card:hover .rc-arrow {
+      transform: translateX(3px);
+      color: var(--accent-indigo);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 6px;
+    }
+    footer a {
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+    footer a:hover { color: var(--text-primary); }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 768px) {
+      :root { --section-gap: 100px; }
+
+      .nav-links { display: none; }
+      .mobile-toggle { display: block; }
+
+      .hero { padding: 140px 0 80px; }
+
+      .build-grid { grid-template-columns: 1fr; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .resources-grid { grid-template-columns: 1fr; }
+      .pattern-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 38px; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .btn { width: 100%; justify-content: center; max-width: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── Navigation ─── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logo-g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4F46E5"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <path d="M15 70 L50 55 L85 70 L85 80 L50 65 L15 80Z" fill="url(#logo-g)"/>
+          <path d="M25 45 L75 45 L80 55 L20 55Z" fill="url(#logo-g)"/>
+          <path d="M40 20 L60 20 L62 45 L38 45Z" fill="url(#logo-g)" opacity="0.8"/>
+        </svg>
+        Canton Foundry
+      </a>
+      <ul class="nav-links">
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#guide">Guide</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" class="nav-github" aria-label="GitHub">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#tools">Tools</a>
+    <a href="#guide">Guide</a>
+    <a href="#about">About</a>
+    <a href="#resources">Resources</a>
+    <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">GitHub</a>
+  </div>
+
+  <!-- ─── Hero ─── -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1 class="fade-in">Canton Foundry</h1>
+      <p class="tagline fade-in delay-1">Open-source infrastructure for Canton Network</p>
+      <p class="subtext fade-in delay-2">Building developer tools, contract libraries, and applications that strengthen the Canton ecosystem</p>
+      <div class="hero-ctas fade-in delay-3">
+        <a href="#tools" class="btn btn-primary">
+          Explore Our Tools
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── What We Build ─── -->
+  <section>
+    <div class="container">
+      <div class="divider"></div>
+      <div class="section-header fade-in">
+        <p class="section-label">What We Build</p>
+        <h2>Infrastructure for the Canton ecosystem</h2>
+      </div>
+      <div class="build-grid">
+        <div class="build-card fade-in delay-1">
+          <div class="build-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>Infrastructure &amp; DevTools</h3>
+          <p>CI/CD pipelines, project scaffolding, developer guides</p>
+        </div>
+        <div class="build-card fade-in delay-2">
+          <div class="build-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Smart Contract Libraries</h3>
+          <p>Audited, reusable Daml patterns for common use cases</p>
+        </div>
+        <div class="build-card fade-in delay-3">
+          <span class="badge">Coming Soon</span>
+          <div class="build-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09zM12 15l-3-3M22 2l-7.5 7.5"/><path d="M9.13 10.22C8.46 8.82 8 7.08 8 5c-1.26-.28-3.17-.36-5 2 .28 3.24 1.8 5 4 6M14.87 13.78c1.4.67 3.14 1.13 5.22 1.13.28-1.26.36-3.17-2-5-3.24.28-5 1.8-6 4"/></svg>
+          </div>
+          <h3>Applications</h3>
+          <p>Revenue-generating apps targeting Featured Application status</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Our Tools ─── -->
+  <section id="tools">
+    <div class="container">
+      <div class="divider"></div>
+      <div class="section-header fade-in">
+        <p class="section-label">Our Tools</p>
+        <h2>Open-source building blocks</h2>
+        <p>Everything you need to build, test, and deploy on Canton Network</p>
+      </div>
+      <div class="tools-grid">
+
+        <div class="tool-card fade-in delay-1">
+          <h3>canton-patterns</h3>
+          <p class="tool-desc">OpenZeppelin for Daml — audited, reusable contract patterns</p>
+          <p class="tool-stats">6 audited patterns &middot; 45 tests</p>
+          <div class="tool-bottom">
+            <a href="https://github.com/JohnLilic/canton-patterns" target="_blank" rel="noopener noreferrer" class="tool-link">
+              View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="tool-card fade-in delay-2">
+          <h3>create-canton-app</h3>
+          <p class="tool-desc">One-command project scaffolder for Canton applications</p>
+          <div class="tool-command">npx create-canton-app myapp</div>
+          <div class="tool-bottom">
+            <a href="https://github.com/JohnLilic/create-canton-app" target="_blank" rel="noopener noreferrer" class="tool-link">
+              View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="tool-card fade-in delay-1">
+          <h3>canton-ci-templates</h3>
+          <p class="tool-desc">Production CI/CD workflows for Daml projects</p>
+          <p class="tool-stats">GitHub Actions &middot; Build + Test + Deploy</p>
+          <div class="tool-bottom">
+            <a href="https://github.com/JohnLilic/canton-ci-templates" target="_blank" rel="noopener noreferrer" class="tool-link">
+              View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="tool-card fade-in delay-2">
+          <h3>Developer Guide</h3>
+          <p class="tool-desc">Comprehensive guide to building on Canton Network</p>
+          <p class="tool-stats">9 sections &middot; Code examples &middot; Patterns</p>
+          <div class="tool-bottom">
+            <a href="#guide" class="tool-link">
+              Read below <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 7L17 17M17 17H7M17 17V7"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Developer Guide ─── -->
+  <section id="guide">
+    <div class="container">
+      <div class="divider"></div>
+      <div class="section-header fade-in">
+        <p class="section-label">Developer Guide</p>
+        <h2>Everything you need to start building</h2>
+        <p>From zero to a deployed Canton application</p>
+      </div>
+      <div class="guide-section">
+
+        <!-- 1. What is Canton? -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">01</span> What is Canton?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Canton Network is a privacy-enabled interoperable blockchain network designed for institutional use. It connects independent applications into a single network while preserving data confidentiality through sub-transaction privacy.</p>
+              <p>Canton uses Daml as its smart contract language, enabling developers to model complex multi-party workflows with built-in authorization and privacy guarantees.</p>
+              <p><a href="https://www.canton.network" target="_blank" rel="noopener noreferrer" class="inline-link">Read the Canton Network whitepaper &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Why Build on Canton? -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">02</span> Why Build on Canton?</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Sub-transaction privacy</strong> — participants only see the parts of a transaction they&rsquo;re involved in</li>
+                <li><strong>$1.5T+ monthly volume</strong> — real transaction volume across the network</li>
+                <li><strong>600+ validators</strong> — securing the network infrastructure</li>
+                <li><strong>Featured App rewards</strong> — earn Canton Coin for building valuable applications</li>
+                <li><strong>Composability</strong> — your app can interact with any other Canton application</li>
+                <li><strong>Enterprise-grade</strong> — built for regulated industries with institutional participants</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Your First 15 Minutes -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">03</span> Your First 15 Minutes</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Get a Canton app running locally in a few commands:</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">bash</span>
+                  <button class="copy-btn" aria-label="Copy code">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy
+                  </button>
+                </div>
+                <pre><code class="language-bash"># Install the Daml SDK
+curl -sSL https://get.daml.com/ | sh
+
+# Create a new project
+npx create-canton-app myapp
+cd myapp
+
+# Build your contracts
+daml build
+
+# Run tests
+daml test
+
+# Start the local sandbox
+daml start</code></pre>
+              </div>
+              <p>Your app is now running locally with a Daml sandbox, JSON API, and a Navigator UI at <code style="font-family:var(--mono);font-size:12.5px;background:rgba(255,255,255,0.05);padding:1px 6px;border-radius:4px;color:var(--accent-blue);">http://localhost:7500</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Understanding Daml -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">04</span> Understanding Daml</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Daml is a purpose-built smart contract language. The core concepts are <strong>templates</strong> (define data and rules), <strong>choices</strong> (define actions), <strong>signatories</strong> (who must authorize), and <strong>observers</strong> (who can see).</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">daml</span>
+                  <button class="copy-btn" aria-label="Copy code">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy
+                  </button>
+                </div>
+                <pre><code class="language-haskell">template Iou
+  with
+    issuer : Party
+    owner : Party
+    amount : Decimal
+    currency : Text
+  where
+    signatory issuer
+    observer owner
+
+    choice Transfer : ContractId Iou
+      with newOwner : Party
+      controller owner
+      do create this with owner = newOwner
+
+    choice Settle : ()
+      controller issuer
+      do return ()</code></pre>
+              </div>
+              <p>This IOU template demonstrates all four concepts: the template holds data, Transfer and Settle are choices, issuer is the signatory, and owner is an observer.</p>
+              <p><a href="https://docs.daml.com/cheat-sheet" target="_blank" rel="noopener noreferrer" class="inline-link">Daml cheat sheet &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Common Patterns -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">05</span> Common Patterns</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>canton-patterns</strong> provides audited, reusable Daml contract patterns &mdash; think of it as OpenZeppelin for Daml.</p>
+              <div class="pattern-list">
+                <div class="pattern-item"><strong>Access Control</strong><span>Role-based permissions with admin delegation</span></div>
+                <div class="pattern-item"><strong>Token</strong><span>Fungible token with transfer, split, and merge</span></div>
+                <div class="pattern-item"><strong>Lifecycle</strong><span>State machine transitions with validation</span></div>
+                <div class="pattern-item"><strong>Locking</strong><span>Time-based and condition-based contract locking</span></div>
+                <div class="pattern-item"><strong>Oracle</strong><span>External data feeds with attestation</span></div>
+                <div class="pattern-item"><strong>Voting</strong><span>Weighted voting with quorum thresholds</span></div>
+              </div>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">daml</span>
+                  <button class="copy-btn" aria-label="Copy code">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy
+                  </button>
+                </div>
+                <pre><code class="language-haskell">-- Using the Token pattern from canton-patterns
+template Token
+  with
+    issuer : Party
+    owner : Party
+    amount : Decimal
+  where
+    signatory issuer
+    observer owner
+
+    choice Token_Transfer : ContractId Token
+      with newOwner : Party
+      controller owner
+      do create this with owner = newOwner
+
+    choice Token_Split : (ContractId Token, ContractId Token)
+      with splitAmount : Decimal
+      controller owner
+      do
+        first &lt;- create this with amount = splitAmount
+        second &lt;- create this with
+          amount = amount - splitAmount
+        return (first, second)</code></pre>
+              </div>
+              <p><a href="https://github.com/JohnLilic/canton-patterns" target="_blank" rel="noopener noreferrer" class="inline-link">Browse all patterns on GitHub &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Testing Your Contracts -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">06</span> Testing Your Contracts</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Daml Script lets you test contracts by simulating multi-party workflows:</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">daml</span>
+                  <button class="copy-btn" aria-label="Copy code">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy
+                  </button>
+                </div>
+                <pre><code class="language-haskell">test_iou_transfer = script do
+  alice &lt;- allocateParty "Alice"
+  bob &lt;- allocateParty "Bob"
+
+  -- Alice creates an IOU
+  iou &lt;- submit alice do
+    createCmd Iou with
+      issuer = alice
+      owner = alice
+      amount = 100.0
+      currency = "USD"
+
+  -- Alice transfers to Bob
+  submit alice do
+    exerciseCmd iou Transfer with
+      newOwner = bob
+
+  return ()</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. CI/CD Pipeline -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">07</span> CI/CD Pipeline</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Use <strong>canton-ci-templates</strong> to add production-grade CI/CD to your Daml project:</p>
+              <div class="code-block">
+                <div class="code-header">
+                  <span class="code-lang">yaml</span>
+                  <button class="copy-btn" aria-label="Copy code">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+                    Copy
+                  </button>
+                </div>
+                <pre><code class="language-yaml"># .github/workflows/ci.yml
+name: Daml CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-and-test:
+    uses: JohnLilic/canton-ci-templates/.github/workflows/daml-ci.yml@main
+    with:
+      daml-sdk-version: "2.9.0"
+      run-tests: true
+      upload-dar: true</code></pre>
+              </div>
+              <p><a href="https://github.com/JohnLilic/canton-ci-templates" target="_blank" rel="noopener noreferrer" class="inline-link">See canton-ci-templates &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. DevNet to MainNet -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">08</span> DevNet to MainNet</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>The deployment path for Canton applications:</p>
+              <div class="deploy-path">
+                <div class="deploy-step">
+                  <span class="deploy-num">1</span>
+                  <div class="deploy-step-text"><strong>Local Sandbox</strong> Develop and test locally with <code>daml start</code></div>
+                </div>
+                <div class="deploy-step">
+                  <span class="deploy-num">2</span>
+                  <div class="deploy-step-text"><strong>DevNet</strong> Deploy to Canton DevNet for integration testing with other applications</div>
+                </div>
+                <div class="deploy-step">
+                  <span class="deploy-num">3</span>
+                  <div class="deploy-step-text"><strong>TestNet</strong> Validate with real network conditions and other participants</div>
+                </div>
+                <div class="deploy-step">
+                  <span class="deploy-num">4</span>
+                  <div class="deploy-step-text"><strong>MainNet</strong> Go live on Canton Network</div>
+                </div>
+              </div>
+              <p>Each stage lets you validate interoperability with other Canton applications while increasing the scope of testing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Earning Canton Coin -->
+        <div class="accordion-item fade-in">
+          <button class="accordion-trigger">
+            <span style="display:flex;align-items:center;"><span class="num">09</span> Earning Canton Coin</span>
+            <svg class="chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li>Canton Network rewards builders through the <strong>Featured Application</strong> program</li>
+                <li><strong>50% of new Canton Coin</strong> is allocated to application builders</li>
+                <li><strong>Fee burn multipliers</strong> reward applications that generate network activity</li>
+                <li>Applications must demonstrate real utility and user adoption</li>
+                <li>Validator nodes earn additional rewards for securing the network</li>
+              </ul>
+              <p>Canton Foundry is pursuing validator status to contribute directly to network infrastructure while building applications that qualify for Featured Application rewards.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about">
+    <div class="container">
+      <div class="divider"></div>
+      <div class="section-header fade-in">
+        <p class="section-label">About</p>
+        <h2>About Canton Foundry</h2>
+      </div>
+      <div class="about-content fade-in">
+        <p>Canton Foundry is an open-source venture production studio. Our mission is to lower the barrier to building on Canton Network by providing battle-tested tools, libraries, and guides that any developer can use.</p>
+        <p>We&rsquo;re pursuing validator status to contribute directly to Canton Network infrastructure while building revenue-generating applications targeting Featured Application status.</p>
+        <div class="license-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          All tools are BSD-0-Clause licensed &mdash; use them however you want, no strings attached.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Resources ─── -->
+  <section id="resources">
+    <div class="container">
+      <div class="divider"></div>
+      <div class="section-header fade-in">
+        <p class="section-label">Resources</p>
+        <h2>Links &amp; references</h2>
+      </div>
+      <div class="resources-grid">
+        <a href="https://www.canton.network" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-1">
+          <div>
+            <div class="rc-name">Canton Network</div>
+            <div class="rc-url">canton.network</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://docs.daml.com" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-2">
+          <div>
+            <div class="rc-name">Official Documentation</div>
+            <div class="rc-url">docs.daml.com</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://discord.gg/canton" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-3">
+          <div>
+            <div class="rc-name">Canton Discord</div>
+            <div class="rc-url">discord.gg/canton</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://discuss.daml.com" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-1">
+          <div>
+            <div class="rc-name">Daml Forum</div>
+            <div class="rc-url">discuss.daml.com</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://cantonscan.com" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-2">
+          <div>
+            <div class="rc-name">Canton Block Explorer</div>
+            <div class="rc-url">cantonscan.com</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" class="resource-card fade-in delay-3">
+          <div>
+            <div class="rc-name">Our GitHub</div>
+            <div class="rc-url">github.com/JohnLilic</div>
+          </div>
+          <svg class="rc-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom:10px;">
+        <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Built by Canton Foundry
+        </a>
+      </p>
+      <p>All tools are open source under BSD-0-Clause</p>
+    </div>
+  </footer>
+
+  <!-- ─── Scripts ─── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-haskell.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+  <script>
+    /* ── Intersection Observer for fade-in ── */
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    /* ── Accordion ── */
+    document.querySelectorAll('.accordion-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.parentElement;
+        const isOpen = item.classList.contains('open');
+        item.classList.toggle('open');
+        if (!isOpen) {
+          Prism.highlightAllUnder(item);
+        }
+      });
+    });
+
+    /* ── Copy to clipboard ── */
+    document.querySelectorAll('.copy-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const codeBlock = btn.closest('.code-block');
+        const code = codeBlock.querySelector('code').textContent;
+        navigator.clipboard.writeText(code).then(() => {
+          btn.classList.add('copied');
+          btn.innerHTML = `
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Copied!
+          `;
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = `
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+              Copy
+            `;
+          }, 2000);
+        });
+      });
+    });
+
+    /* ── Mobile menu ── */
+    const toggle = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    /* ── Active nav link on scroll ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const navObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach((link) => {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === `#${id}`
+              );
+            });
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '-64px 0px -50% 0px' }
+    );
+    sections.forEach((section) => navObserver.observe(section));
+  </script>
+</body>
+</html>
