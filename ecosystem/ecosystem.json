@@ -1,1153 +1,3241 @@
 {
   "projects": [
     {
-      "name": "Kairo",
-      "description": "DEX with atomic cross-token trading on Canton",
-      "category": "DEX",
-      "url": "https://kairo.finance",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "21shares",
+      "name": "21shares",
+      "description": "Offers a large suite of crypto-currency exchange-traded products (ETPs).",
+      "categories": [
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/21shares",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
+      "slug": "4mgroup",
+      "name": "4MGroup",
+      "description": "Strategy and integration services.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/4mgroup",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "5n-loop-wallet",
+      "name": "5N Loop Wallet",
+      "description": "A self-custody web-based wallet that emphasizes on security and UX,",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/5n-loop-wallet",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "7ridge",
+      "name": "7Ridge",
+      "description": "A global investment firm developing next-generation financial applications on Canton Network.",
+      "categories": [
+        "Data & Analytics",
+        "NaaS",
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/7ridge",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "acme",
       "name": "ACME",
-      "description": "Decentralized overcollateralized lending protocol",
-      "category": "DeFi",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "description": "A decentralized, overcollateralized lending platform on Canton, enabling secure, compliant lending and borrowing with privacy and control.",
+      "categories": [
+        "Developer Tools",
+        "Data & Analytics"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/acme",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "BitSafe",
-      "description": "Bitcoin yield through CBTC vaults on Canton",
-      "category": "DeFi",
-      "url": "https://bitsafe.finance",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "akua-finance",
+      "name": "Akua Finance",
+      "description": "Wallet and API marketplace provider for DeFi and crypto based financing.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/akua-finance",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Thetanuts Finance",
-      "description": "Onchain options and structured products protocol",
-      "category": "DeFi",
-      "url": "https://thetanuts.finance",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "alchemy",
+      "name": "Alchemy",
+      "description": "Offers a suite of developer tools and APIs that simplify building on blockchain networks, enabling projects to scale efficiently and reliably.",
+      "categories": [
+        "Developer Tools"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/alchemy",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "LendOS",
-      "description": "Commercial lending platform on Canton Network",
-      "category": "Lending",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "alum-labs",
+      "name": "ALUM Labs",
+      "description": null,
+      "categories": [
+        "Data & Analytics"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/alum-labs",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
     },
     {
-      "name": "Cantara",
-      "description": "Peer-to-peer billing, subscriptions, and streaming payments",
-      "category": "Payments",
-      "url": "https://cantara.finance",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
-    },
-    {
-      "name": "5N Loop",
-      "description": "Self-custodial web wallet for Canton Network",
-      "category": "Wallets",
-      "url": "https://cantonloop.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Bron",
-      "description": "Self-custody wallet with direct protocol access",
-      "category": "Wallets",
-      "url": "https://bron.org",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "C8 Wallet",
-      "description": "Non-custodial multi-account wallet for Canton",
-      "category": "Wallets",
-      "url": "https://cantor8.tech",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Moonshot",
-      "description": "Canton Network wallet",
-      "category": "Wallets",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Cypherock",
-      "description": "Hardware wallet with Canton Network support",
-      "category": "Wallets",
-      "url": "https://cypherock.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Nightly",
-      "description": "Multi-chain wallet with Canton support",
-      "category": "Wallets",
-      "url": "https://nightly.app",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "CantonScan",
-      "description": "Block explorer for Canton Network by Proof Group",
-      "category": "Analytics",
-      "url": "https://cantonscan.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "CC Explorer",
-      "description": "Canton chain explorer by Node Fortress",
-      "category": "Analytics",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "5N Lighthouse",
-      "description": "Canton Network analytics and monitoring",
-      "category": "Analytics",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Sync Insights",
-      "description": "AI-powered analytics with natural language queries",
-      "category": "Analytics",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Coin Metrics Canton Intelligence",
-      "description": "Institutional-grade network data and analytics",
-      "category": "Analytics",
-      "url": "https://coinmetrics.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
+      "slug": "amberdata",
       "name": "Amberdata",
-      "description": "Digital asset data and analytics for Canton",
-      "category": "Analytics",
-      "url": "https://amberdata.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "description": "Data, analytics, tools and insights that empower financial institutions to research, trade, and manage risk and compliance in crypto and other digital assets.",
+      "categories": [
+        "Data & Analytics"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/amberdata",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Flipside Crypto",
-      "description": "Onchain analytics and data for Canton Network",
-      "category": "Analytics",
-      "url": "https://flipsidecrypto.xyz",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "ambertrading",
+      "name": "AmberTrading",
+      "description": "A crypto-native financial services firm and market maker providing liquidity, asset management, and trading solutions for institutions and high-net-worth investors.",
+      "categories": [
+        "Liquidity"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ambertrading",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Kaiko",
-      "description": "Market data and analytics for Canton assets",
-      "category": "Analytics",
-      "url": "https://kaiko.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "angelhack",
+      "name": "AngelHack",
+      "description": "Provides developer education and programs, including learning pathways for Canton Network.",
+      "categories": [
+        "Developer Tools"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/angelhack",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Nansen",
-      "description": "Blockchain analytics with Canton Network support",
-      "category": "Analytics",
-      "url": "https://nansen.ai",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "archax",
+      "name": "Archax",
+      "description": "UK and EU regulated digital asset exchange, broker, and custodian. Providing front-to-back infrastructure and services for the issuance, trading and safeguarding of tokenised real-world assets and digital securities.",
+      "categories": [
+        "Custody",
+        "Exchanges",
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/archax",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Noves",
-      "description": "Private chain explorer with export capabilities",
-      "category": "Analytics",
-      "url": "https://noves.fi",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "arrington-capital",
+      "name": "Arrington Capital",
+      "description": "Digital Assets and Web3 VC and Hedge Fund.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/arrington-capital",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Maestro",
-      "description": "Blockchain data infrastructure for Canton",
-      "category": "Analytics",
-      "url": "https://www.gomaestro.org",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "artichoke-capital",
+      "name": "Artichoke Capital",
+      "description": "A technology venture capital firm advancing the development of web3.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/artichoke-capital",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Blockdaemon",
-      "description": "RPC endpoints, MPC wallets, and institutional vaults",
-      "category": "NaaS",
-      "url": "https://blockdaemon.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "asterizm",
+      "name": "Asterizm",
+      "description": "Asterizm is a cross-chain interoperable infrastructure for DeFi devs and TradFi operating with tokenized RWAs.",
+      "categories": [
+        "Liquidity",
+        "Interoperability",
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/asterizm",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Kiln",
-      "description": "Enterprise staking and node infrastructure",
-      "category": "NaaS",
-      "url": "https://kiln.fi",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "axa-im",
+      "name": "AXA IM",
+      "description": "An investor in the EIB's 100 million euro-denominated digitally native bond, the inaugural issuance on GS DAP.",
+      "categories": [],
+      "canton_networks": [
+        "gs_dap"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/axa-im",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "P2P",
-      "description": "Non-custodial staking and node infrastructure",
-      "category": "NaaS",
-      "url": "https://p2p.org",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "b2c2",
+      "name": "B2C2",
+      "description": "A leading institutional crypto liquidity provider and market maker, offering OTC trading and derivatives solutions across digital asset markets.",
+      "categories": [
+        "Liquidity"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/b2c2",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Figment",
-      "description": "Institutional staking and data services",
-      "category": "NaaS",
-      "url": "https://figment.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "banco-santander",
+      "name": "Banco Santander",
+      "description": "The joint lead manager for the EIB's 100 million euro-denominated digitally native bond, the inaugural issuance on Goldman Sachs DAP.",
+      "categories": [],
+      "canton_networks": [
+        "gs_dap"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/banco-santander",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Everstake",
-      "description": "Staking and node provider for Canton Network",
-      "category": "NaaS",
-      "url": "https://everstake.one",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bank-of-america",
+      "name": "Bank of America",
+      "description": "Bank of America (BofA) is a leading American multinational investment bank and financial services holding company. BofA has participated in several capital markets use cases on Canton.",
+      "categories": [
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bank-of-america",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "DSRV",
-      "description": "Validator and node operations for Canton",
-      "category": "NaaS",
-      "url": "https://dsrv.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bank-of-china",
+      "name": "Bank of China",
+      "description": "The joint global coordinator, joint lead manager and bookrunner, and custodian for HKSAR Government's first tokenized green bond issuance.",
+      "categories": [
+        "Custody"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "gs_dap"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bank-of-china",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Launchnodes",
-      "description": "Self-sovereign validator infrastructure",
-      "category": "NaaS",
-      "url": "https://launchnodes.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bcw-group",
+      "name": "BCW Group",
+      "description": "BCW is an enterprise solutions firm building cloud, Web3, & AI infrastructure, specialising in staking solutions, APIs, and nodes.",
+      "categories": [
+        "NaaS",
+        "Payments"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bcw-group",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Edgevana",
-      "description": "Edge cloud infrastructure for Canton validators",
-      "category": "NaaS",
-      "url": "https://edgevana.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "beyondcentral",
+      "name": "BeyondCentral",
+      "description": "The developer of https://ncase.app, and other tools related to web3 and cybersecurity.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/beyondcentral",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "GlobalStake",
-      "description": "Institutional-grade staking infrastructure",
-      "category": "NaaS",
-      "url": "https://globalstake.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "binance-us",
+      "name": "Binance US",
+      "description": "A regulated cryptocurrency exchange providing retail and institutional investors in the United States with trading, custody, and staking services.",
+      "categories": [
+        "Exchanges"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/binance-us",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Finoa",
-      "description": "Regulated custody and staking for Canton",
-      "category": "NaaS",
-      "url": "https://finoa.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bitalpha-dba-bitwave",
+      "name": "Bitalpha dba Bitwave",
+      "description": "Bitwave delivers enterprise crypto accounting and tax automation on Canton, enabling accurate tracking, reporting, and compliance.",
+      "categories": [
+        "Data & Analytics",
+        "Financing",
+        "Payments"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/bitalpha-dba-bitwave",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Luganodes",
-      "description": "Institutional-grade blockchain infrastructure",
-      "category": "NaaS",
-      "url": "https://luganodes.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bitcoin-suisse",
+      "name": "Bitcoin Suisse",
+      "description": "Established in 2013 Bitcoin Suisse is the oldest Swiss Crypto Custodian, Broker, and Staking provider validating on the Canton Network.",
+      "categories": [
+        "Custody"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bitcoin-suisse",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "GatewayFM",
-      "description": "RPC and node infrastructure for Canton",
-      "category": "NaaS",
-      "url": "https://gateway.fm",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bitgo",
+      "name": "BitGo",
+      "description": "BitGo is the digital asset infrastructure company, delivering custody, wallets, staking, trading, financing, and settlement services from regulated cold storage.",
+      "categories": [
+        "Custody",
+        "Stablecoins",
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/bitgo",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Node Monster",
-      "description": "Canton Network validator and node services",
-      "category": "NaaS",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "bitsafe",
+      "name": "BitSafe",
+      "description": "Providers of bridgeless wrapped Bitcoin solution on Canton (CBTC) with institutional-grade security and liquidity.",
+      "categories": [
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/bitsafe",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Komonode",
-      "description": "Node infrastructure and validator services",
-      "category": "NaaS",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Canton Nodes",
-      "description": "Dedicated Canton Network node services",
-      "category": "NaaS",
-      "url": "https://cantonnodes.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Proof Group",
-      "description": "Validator infrastructure and block explorer",
-      "category": "Infrastructure",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [
-        "CantonScan"
-      ],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Chainlink",
-      "description": "Super Validator and oracle data feeds for Canton",
-      "category": "Bridges",
-      "url": "https://chain.link",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "LayerZero",
-      "description": "Cross-chain messaging protocol for Canton",
-      "category": "Bridges",
-      "url": "https://layerzero.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Wormhole",
-      "description": "Cross-chain bridge connecting Canton to other networks",
-      "category": "Bridges",
-      "url": "https://wormhole.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Ownera",
-      "description": "Digital securities interoperability layer",
-      "category": "Bridges",
-      "url": "https://ownera.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Houdini Swap",
-      "description": "Cross-chain swap aggregator with Canton support",
-      "category": "Bridges",
-      "url": "https://houdiniswap.com",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "Asterizm Collateral Bridge",
-      "description": "Cross-chain collateral bridging protocol",
-      "category": "Bridges",
-      "url": "https://asterizm.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "AgenticLedger / Canty",
-      "description": "AI agent platform and chatbot for Canton Network",
-      "category": "AI",
-      "url": "https://canty.ai",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
-    },
-    {
-      "name": "1Pilot",
-      "description": "AI-powered blockchain insights for Canton",
-      "category": "AI",
-      "url": "https://macaomining.co",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
-    },
-    {
-      "name": "BMCP Invest",
-      "description": "Compliant digital securities platform on Canton",
-      "category": "Tokenization",
-      "url": "https://blackmanta.capital",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": true
-    },
-    {
-      "name": "T-RIZE",
-      "description": "Institutional investment tokenization platform",
-      "category": "Tokenization",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
-    },
-    {
-      "name": "Texture Capital",
-      "description": "ATS for on-chain digital securities trading",
-      "category": "Tokenization",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
-    },
-    {
-      "name": "7Trust by C7",
-      "description": "Validator identity verification on Canton Network",
-      "category": "Identity",
-      "url": "https://7trust.c7.digital",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "canton-patterns",
-      "description": "OpenZeppelin for Daml \u2014 6 audited contract patterns, 45 tests",
-      "category": "DevTools",
-      "url": "https://github.com/JohnLilic/canton-patterns",
-      "github": "https://github.com/JohnLilic/canton-patterns",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": true,
-      "stack": [
-        "daml",
-        "canton-2x"
-      ],
-      "relatedTo": [
-        "create-canton-app",
-        "canton-ci-templates"
-      ],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-16",
-      "featuredApp": null
-    },
-    {
-      "name": "create-canton-app",
-      "description": "One-command project scaffolder for Canton",
-      "category": "DevTools",
-      "url": "https://github.com/JohnLilic/create-canton-app",
-      "github": "https://github.com/JohnLilic/create-canton-app",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": true,
-      "stack": [
-        "typescript",
-        "daml"
-      ],
-      "relatedTo": [
-        "canton-patterns",
-        "canton-ci-templates"
-      ],
-      "installCommand": "npx create-canton-app myapp",
-      "mcpConfig": null,
-      "addedDate": "2026-02-16",
-      "featuredApp": null
-    },
-    {
-      "name": "canton-ci-templates",
-      "description": "Production CI/CD workflows for Daml projects",
-      "category": "DevTools",
-      "url": "https://github.com/JohnLilic/canton-ci-templates",
-      "github": "https://github.com/JohnLilic/canton-ci-templates",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": true,
-      "stack": [
-        "daml"
-      ],
-      "relatedTo": [
-        "canton-patterns",
-        "create-canton-app"
-      ],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-16",
-      "featuredApp": null
-    },
-    {
-      "name": "canton-mcp-server",
-      "description": "Read-only MCP server for AI agents to query Canton",
-      "category": "DevTools",
-      "url": "https://github.com/JohnLilic/canton-mcp-server",
-      "github": "https://github.com/JohnLilic/canton-mcp-server",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": true,
-      "stack": [
-        "typescript",
-        "grpc"
-      ],
-      "relatedTo": [],
-      "installCommand": "npm install -g canton-mcp-server",
-      "mcpConfig": "{\"mcpServers\":{\"canton\":{\"command\":\"npx\",\"args\":[\"-y\",\"canton-mcp-server\"],\"env\":{\"CANTON_USE_MOCK\":\"true\"}}}}",
-      "addedDate": "2026-02-16",
-      "featuredApp": null
-    },
-    {
-      "name": "Canton Developer Guide",
-      "description": "Comprehensive guide from zero to deployed app",
-      "category": "DevTools",
-      "url": "https://github.com/JohnLilic/canton-dev-guide",
-      "github": "https://github.com/JohnLilic/canton-dev-guide",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": true,
-      "stack": [
-        "daml"
-      ],
-      "relatedTo": [
-        "canton-patterns",
-        "create-canton-app"
-      ],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-16",
-      "featuredApp": null
-    },
-    {
-      "name": "Daml SDK",
-      "description": "Official SDK for building on Canton by Digital Asset",
-      "category": "DevTools",
-      "url": "https://docs.daml.com",
-      "github": null,
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": false,
-      "stack": [
-        "daml",
-        "java",
-        "typescript",
-        "python",
-        "grpc",
-        "json-api",
-        "canton-2x",
-        "canton-3x"
-      ],
-      "relatedTo": [
-        "create-canton-app",
-        "canton-patterns"
-      ],
-      "installCommand": "curl -sSL https://get.daml.com/ | sh",
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "cn-quickstart",
-      "description": "Full-stack Canton scaffolder by Digital Asset",
-      "category": "DevTools",
-      "url": "https://github.com/digital-asset/cn-quickstart",
-      "github": "https://github.com/digital-asset/cn-quickstart",
-      "status": "live",
-      "openSource": true,
-      "cantonFoundry": false,
-      "stack": [
-        "daml",
-        "java",
-        "typescript",
-        "canton-3x"
-      ],
-      "relatedTo": [
-        "create-canton-app",
-        "Daml SDK"
-      ],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
-      "name": "AppsFactory",
-      "description": "Developer gateway and hackathon platform for Canton",
-      "category": "DevTools",
-      "url": "https://appsfactory.cc",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
-      ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
-    },
-    {
+      "slug": "bitwave",
       "name": "Bitwave",
-      "description": "Crypto accounting, tax, and compliance platform",
-      "category": "Analytics",
-      "url": "https://bitwave.io",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "description": "A digital asset finance platform for enterprises with audit-ready platform to track and price Canton Coin and B2B payments platform.",
+      "categories": [
+        "Stablecoins",
+        "Payments"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/bitwave",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
-      "name": "Denex",
-      "description": "Utility apps and gas station for Canton Network",
-      "category": "DeFi",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "slug": "black-manta-capital-partners",
+      "name": "Black Manta",
+      "description": "A European investment platform and BaFin-licensed provider of tokenized securities on Canton, enabling regulated digital fundraising and asset management.",
+      "categories": [
+        "Tokenized Assets"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": false
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/black-manta-capital-partners",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
     },
     {
+      "slug": "blockdaemon",
+      "name": "Blockdaemon",
+      "description": "Blockdaemon secures $110B+ for 400+ institutions with trusted Web3 infrastructure: nodes, APIs, staking, wallets & vaults.",
+      "categories": [
+        "NaaS",
+        "Custody"
+      ],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/blockdaemon",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bnp-paribas",
+      "name": "BNP Paribas",
+      "description": "Operates Neobonds, an asset tokenization platform. BNPP is one of the 30 strategic partners that launched the Canton Network.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/bnp-paribas",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bny",
+      "name": "BNY",
+      "description": "Participated in Canton Network Pilots and used Canton in the US Regulated Liability Network (RLN/RSN) projects.",
+      "categories": [
+        "Custody"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bny",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bp",
+      "name": "bp",
+      "description": "Pairing natural gas trades on Eleox Ox Pair, using distributed ledger and smart contracts.",
+      "categories": [],
+      "canton_networks": [
+        "eleox"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bp",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "brale",
+      "name": "Brale",
+      "description": "A platform for creating and launching stablecoins enabling Brale supported stabelcoins for use as an on- and off-ramp to the Canton Network.",
+      "categories": [
+        "Stablecoins",
+        "Wallets",
+        "Payments"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/brale",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "broadridge-dlr",
+      "name": "Broadridge DLR",
+      "description": "Broadridge's Distributed Ledger Repo (DLR) platform on the Canton Network processes over $8T/month in repo transactions.",
+      "categories": [
+        "Financing",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/broadridge-dlr",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bron",
+      "name": "Bron",
+      "description": "Bron provides a next generation non-custodial wallet.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bron",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bron-wallet",
+      "name": "Bron Wallet",
+      "description": "Provides next-generation non-custodial wallet supporting Canton Coin and Canton native assets.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bron-wallet",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "bybit",
+      "name": "Bybit",
+      "description": "A centralized exchange that lists and provides trading pairs and related services for Canton Coin",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/bybit",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "calastone",
+      "name": "Calastone",
+      "description": "The largest global funds network, connecting the world's leading financial organizations.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/calastone",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cantara",
+      "name": "Cantara",
+      "description": "Cantara enables peer-to-peer billing and payments on Canton, powering subscriptions, trading, and service monetization across the network.",
+      "categories": [
+        "Payments",
+        "Financing"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cantara",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cantonswap",
+      "name": "CantonSwap",
+      "description": "CantonSwap is the first dedicated trading application for the Canton Network, enabling atomic multi-currency swaps with zero counterparty risk.",
+      "categories": [
+        "Exchanges",
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cantonswap",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "cantor8",
+      "name": "Cantor8",
+      "description": "A mobile/web wallet with external signing, enabling Canton Coin transfers. The keys stay on-device for full user control and security.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/cantor8",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "castle-island",
+      "name": "Castle Island",
+      "description": "VC firm backing founders building infra and apps for public blockchains to reach their full potential.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/castle-island",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "castleton-commodities-international",
+      "name": "Castleton Commodities International",
+      "description": "Pairing natural gas trades on Eleox Ox Pair, using distributed ledger and smart contracts.",
+      "categories": [],
+      "canton_networks": [
+        "eleox"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/castleton-commodities-international",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cbtc",
+      "name": "CBTC",
+      "description": "CBTC is a 1:1 backed wrapped Bitcoin on Canton, minted and redeemed via a secure decentralized bridge for trading, lending, and settlement.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cbtc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "chain-experts",
+      "name": "Chain Experts",
+      "description": "A company focused on blockchain infrastructure and smart contract development, with specific expertise in Daml.",
+      "categories": [
+        "Developer Tools"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/chain-experts",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "chainlink",
+      "name": "Chainlink",
+      "description": "Provides infrastructure for onchain finance, including secure data feeds, cross-chain messaging, and interoperability.",
+      "categories": [
+        "Interoperability",
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/chainlink",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "chainsafe",
+      "name": "ChainSafe",
+      "description": "Builds open source infrastructure and tools to empower developers on Canton Network.",
+      "categories": [
+        "Developer Tools",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/chainsafe",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "chata",
+      "name": "Chata",
+      "description": "Validator and data integration platform for Canton",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/chata",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "checker-finance",
+      "name": "Checker Finance",
+      "description": "A fintech infrastructure provider specializing in stablecoin liquidity and payments.",
+      "categories": [
+        "Stablecoins",
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/checker-finance",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "circle",
+      "name": "Circle",
+      "description": "USDC and USYC converge on Canton to unlock high-utility stablecoin use cases across apps with privacy and composability.",
+      "categories": [
+        "Stablecoins",
+        "Payments",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/circle",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "citi",
+      "name": "Citi",
+      "description": "An active participant in applications on the Canton Network. It settled the first trade on the HKEX Synapse platform, as well as having participated in various pilot programs leveraging Canton.",
+      "categories": [],
+      "canton_networks": [
+        "hkex_synapse"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/citi",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "clifford-chance",
+      "name": "Clifford Chance",
+      "description": "Global law firm that often acts as observer in Canton Network initiatives to provide insight on legal issues related to digital assets and how they are transferred.",
+      "categories": [
+        "Tokenized Assets",
+        "Forensics & Security"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/clifford-chance",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "coin-metrics",
+      "name": "Coin Metrics",
+      "description": "A leading provider of crypto financial intelligence and Super Validator on the network, launching the Coin Metrics Canton Intelligence App.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/coin-metrics",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "coinshares",
+      "name": "CoinShares",
+      "description": "A leading European investment company specialising in digital assets.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/coinshares",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cointelegraph-decentralization-guardians",
+      "name": "Cointelegraph",
+      "description": "CTDG supports decentralization, running high-performance validators and participating in governance across blockchain networks.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cointelegraph-decentralization-guardians",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "commerzbank-ag",
+      "name": "Commerzbank AG",
+      "description": "A leading German bank, connected to Broadridge's Distributed Ledger Repo solution.",
+      "categories": [],
+      "canton_networks": [
+        "broadridge_dlr"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/commerzbank-ag",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "copper",
+      "name": "Copper",
+      "description": "An institutional crypto custody, prime and collateral management provider with the ability to provide custodial and non-custodial access to the Canton Network and Canton Coin.",
+      "categories": [
+        "Wallets",
+        "NaaS",
+        "Custody"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/copper",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "credit-agricole",
+      "name": "Credit Agricole",
+      "description": "Credit Agricole was a joint structuring bank for the Hong Kong SAR Government's inaugural tokenized green bond offering and uses GS DAP.",
+      "categories": [],
+      "canton_networks": [
+        "gs_dap"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/credit-agricole",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "crypto-finance-ag",
+      "name": "Crypto Finance AG",
+      "description": "Custodian and broker - part of Deutsche Borse Group.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/crypto-finance-ag",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "crypto.com",
+      "name": "Crypto.com",
+      "description": "Crypto.com is a cryptocurrency exchange company based in Singapore.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/crypto.com",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ctrl-alt",
+      "name": "Ctrl Alt",
+      "description": "B2B infrastructure solution provider that makes structuring and investing in tokenised asset classes efficient, cost-effective, and accessible.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ctrl-alt",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cumberland-sv",
+      "name": "Cumberland SV",
+      "description": "Market leading digital assets trading firm active on Canton.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/cumberland-sv",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cygnet",
+      "name": "Cygnet",
+      "description": "Cygnet enables the onchain signing and stamping of otherwise off-chain documents",
+      "categories": [
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cygnet",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "cypherock",
+      "name": "Cypherock",
+      "description": "Enables secure self-custody access to the Canton Network via its audited, open-source hardware wallet with swaps and future staking.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/cypherock",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "d2x",
+      "name": "D2X",
+      "description": "D2X is a crypto futures and options exchange supervised by the AFM and DNB.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/d2x",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "da-utilities",
+      "name": "DA Utilities",
+      "description": "Canton native modular building blocks for tokenization, trading, financing and collateral management on Canton Network",
+      "categories": [
+        "Developer Tools",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/da-utilities",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "deloitte",
+      "name": "Deloitte",
+      "description": "Industry-leading consultancy and transformation firm Deloitte supported various Canton Network projects with deep industry and Daml expertise.",
+      "categories": [
+        "Payments",
+        "Tokenized Assets",
+        "Forensics & Security"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/deloitte",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "denex-gas-station",
+      "name": "Denex Gas Station",
+      "description": "Denex are the creators of utility applications supporting the Canton Network ecosystem, including Denex Gas Station and data solutions.",
+      "categories": [
+        "Payments",
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/denex-gas-station",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "dfns",
+      "name": "Dfns",
+      "description": "Dfns is a digital asset wallet and custody infrastructure provider, supporting Canton Coin and any assets available on Canton.",
+      "categories": [
+        "Wallets",
+        "Custody"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/dfns",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "digital-asset",
+      "name": "Digital Asset",
+      "description": "Creator of the Canton blockchain protocol and Daml smart contract language.",
+      "categories": [
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/digital-asset",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "drw",
+      "name": "DRW",
+      "description": "DRW is a diversified trading firm innovating across both traditional and cutting-edge markets.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer",
+        "broadridge_dlr"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/drw",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "dsrv",
+      "name": "DSRV",
+      "description": "A blockchain infrastructure company, providing powerful and easy-to-use solutions to enable developers and enterprises to become architects of the future.",
+      "categories": [
+        "Developer Tools",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/dsrv",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "dv-chain",
+      "name": "DV Chain",
+      "description": "DV Chain provides trading and investment solutions in digital assets, focusing on liquidity and market-making.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/dv-chain",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "edgevana",
+      "name": "Edgevana",
+      "description": "Validator platform with expertise in node ops, infra performance, and staking optimization on Canton.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/edgevana",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "efficient-frontier",
+      "name": "Efficient Frontier",
+      "description": "Efficient Frontier provides liquidity management, execution algorithms, analytics and advisory solutions for token-backed assets and security token offerings.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/efficient-frontier",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "eib",
+      "name": "EIB",
+      "description": "EIB has issued groundbreaking digitally native bonds through the GS DAP(TM) and HSBC Orion platforms, bringing fully onchain real world assets to the Canton Network.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "gs_dap"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/eib",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "eleox",
+      "name": "Eleox",
+      "description": "Enterprise post-trade & settlement for natural gas on Canton, boosting efficiency with major global producers.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/eleox",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "elk-capital-markets",
+      "name": "Elk Capital Markets",
+      "description": "Proprietary trading firm building scalable trading tech with a lean team of developers and traders.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/elk-capital-markets",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "elliptic",
+      "name": "Elliptic",
+      "description": "Blockchain analytics firm, integrated with Canton and operating a super validator on the network.",
+      "categories": [
+        "Forensics & Security"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/elliptic",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "elwood-technologies",
+      "name": "Elwood Technologies",
+      "description": "A global leader in institutional-grade execution, portfolio, risk, and collateral infrastructure for digital asset markets.",
+      "categories": [
+        "Custody",
+        "Financing"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/elwood-technologies",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "equilend",
+      "name": "EquiLend",
+      "description": "EquiLend 1Source on Canton: Single source of truth for securities finance, covering pre-trade through lifecycle management.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/equilend",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "equitize",
+      "name": "Equitize",
+      "description": "Equitize provides a liquidity layer for tokenized securities across private and public blockchains.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/equitize",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "euroclear",
+      "name": "Euroclear",
+      "description": "A global FMI leader. Tokenized gold, Eurobonds & gilts on Canton to demonstrate improved liquidity and collateral mobility.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/euroclear",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "everstake",
+      "name": "Everstake",
+      "description": "Everstake is a global, non-custodial staking infrastructure provider, supporting institutional and retail clients by running validator nodes.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/everstake",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ey",
+      "name": "EY",
+      "description": "Ernst & Young, is a multinational professional services firm.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ey",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "fairmint",
+      "name": "Fairmint",
+      "description": "SEC-registered Transfer Agent bringing equity onchain - turning customer cap tables into smart contracts.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/fairmint",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "falconx",
+      "name": "FalconX",
+      "description": "A leading market maker and design partner on-chain collateral management solutions on Canton to implement privacy-preserving, automated margining for crypto derivatives.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/falconx",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "fasanara",
+      "name": "Fasanara",
+      "description": "Fasanara Capital is a London-based asset manager specializing in alternative credit, fintech lending, and digital assets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/fasanara",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "fcx",
+      "name": "FCX",
+      "description": "FCX is a FinClear subsidiary, providing a regulated platform for the tokenization of private markets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/fcx",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "fidelity",
+      "name": "Fidelity",
+      "description": "Fidelity International participated in the inaugural tokenized green bond offering of HKSAR Government using Goldman Sach's tokenization platform on Canton.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "gs_dap"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/fidelity",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "figment",
+      "name": "Figment",
+      "description": "Figment is the leading provider of staking infrastructure.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/figment",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "finoa-consensus-services",
+      "name": "Finoa Consensus Services",
+      "description": "Major European crypto custodian; FCS subsidiary provides German-incorporated staking services.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/finoa-consensus-services",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "fiutur",
+      "name": "Fiutur",
+      "description": "Fiutur is creating a digital trust network for the energy transition economy to accelerate sustainability investment with validated data, governance and transparency.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/fiutur",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "five-north",
+      "name": "Five North",
+      "description": "Five North is provider of CantonLoop, a self-custodial wallet for Canton Coin and other assets on Canton.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/five-north",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "flipside-crypto",
+      "name": "Flipside Crypto",
+      "description": "Flipside provides AI driven analysis for blockchains.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/flipside-crypto",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "flow-desk",
+      "name": "Flow Desk",
+      "description": "Flowdesk is a market-making and trading infrastructure provider bringing institutional liquidity to the Canton Network.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/flow-desk",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "flowtraders",
+      "name": "FlowTraders",
+      "description": "Flow Traders is a proprietary trading and liquidity-providing firm bringing institutional liquidity to the Canton Network.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/flowtraders",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "founders-fund",
+      "name": "Founders Fund",
+      "description": "San Francisco based venture capital firm investing in companies building revolutionary technologies.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/founders-fund",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "foundinals",
+      "name": "Foundinals",
+      "description": "Adding value to the Canton Network, onboarding RWA projects in Chinese blockchain communities.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/foundinals",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "franklin-templeton",
+      "name": "Franklin Templeton",
+      "description": "Leading global investment manager and issuer of Benji.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/franklin-templeton",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "frax",
+      "name": "Frax",
+      "description": "Frax delivers GENIUS-standard stablecoin infrastructure to Canton with frxUSD, its U.S. Treasury-backed stablecoin.",
+      "categories": [
+        "Liquidity",
+        "Payments",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/frax",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "galaxy",
+      "name": "Galaxy",
+      "description": "Galaxy is a financial services and investment management firm focused on the digital asset and blockchain technology space.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/galaxy",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gambyl",
+      "name": "Gambyl",
+      "description": "Gambyl is modernizing and scaling the online sports betting industry with a peer-to-peer blockchain-powered sports betting exchange.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gambyl",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gate",
+      "name": "Gate",
+      "description": "A centralized exchange that lists and provides trading pairs and related services for Canton Coin",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gate",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gatewayfm",
+      "name": "GatewayFM",
+      "description": "GatewayFM is an enterprise-grade Web3 infrastructure provider powering scalable, high-performance RPCs, validators, staking, and node services across multiple blockchains.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gatewayfm",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gemini",
+      "name": "Gemini",
+      "description": "Gemini is a U.S.-regulated cryptocurrency exchange and custodian connected on Canton.",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gemini",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gk8-galaxy",
+      "name": "GK8 (Galaxy)",
+      "description": "GK8, a Galaxy (Nasdaq: GLXY) company, provides the most reliable and comprehensive self-custody technology for digital assets.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gk8-galaxy",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "global-blockchain-business-council",
+      "name": "Global Blockchain Business Council",
+      "description": "Global Blockchain Business Council (GBBC) is the largest leading industry association for the blockchain technology and digital assets community.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/global-blockchain-business-council",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "global-synchronizer",
+      "name": "Global Synchronizer",
+      "description": "The Global Synchronizer is a decentralized and transparently governed interoperability service for the Canton Network.",
+      "categories": [
+        "Interoperability"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/global-synchronizer",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "globalstake",
+      "name": "GlobalStake",
+      "description": "Advanced security and validator services for institutional investors, custodians & exchanges.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/globalstake",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "goldman-sachs",
+      "name": "Goldman Sachs",
+      "description": "Goldman Sachs is a leading global investment banking, securities, and investment management firm and Canton Foundation Member. Provider of GS DAP on Canton.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/goldman-sachs",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gravity-team",
+      "name": "Gravity Team",
+      "description": "Gravity Team is one of the top algorithmic market makers and liquidity providers in the crypto space.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gravity-team",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gs-dap",
+      "name": "GS DAP",
+      "description": "Goldman Sachs Digital Asset Platform (GS DAP) is natively on Canton, delivering tokenization services for regulated financial markets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gs-dap",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "gsr",
+      "name": "GSR",
+      "description": "GSR is a leading crypto liquidity provider leveraging institutional collateral solutions on the Canton Network.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/gsr",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hashkeycloud",
+      "name": "HashKeyCloud",
+      "description": "HashkKeyCloud supports over 80 public chains with enterprise-grade staking services.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/hashkeycloud",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hashnote",
+      "name": "Hashnote",
+      "description": "Hashnote is a leading on-chain first digital asset manager. Hashnote USYC, a yield-bearing digital asset is available on the Canton Network.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/hashnote",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hkex-synapse",
+      "name": "HKEX Synapse",
+      "description": "HKEX Group is a leading global operator of exchanges and clearing houses. HKEX provides a blockchain-based settlement system called Synapse.",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/hkex-synapse",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hkma",
+      "name": "HKMA",
+      "description": "Using Canton apps (GS DAP, HSBC Orion) for tokenization, bonds, and in Global Collateral Network.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/hkma",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "houdini-swap",
+      "name": "Houdini Swap",
+      "description": "Houdini Swap is the market leader in private, compliant, non-custodial, cross-chain transactions.",
+      "categories": [
+        "Interoperability",
+        "Payments"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/houdini-swap",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hsbc",
+      "name": "HSBC",
+      "description": "HSBC is active in multiple Canton applications and also provides Orion, HSBC's asset tokenization platform.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/hsbc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hydra-x",
+      "name": "Hydra X",
+      "description": "Hydra X is a digital capital markets infrastructure provider and a licensed custodian of Canton Coin in APAC.",
+      "categories": [
+        "Custody",
+        "Tokenized Assets",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/hydra-x",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "hypernative",
+      "name": "Hypernative",
+      "description": "Hypernative provides real-time risk monitoring and automated threat response for Web3.",
+      "categories": [
+        "Forensics & Security"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/hypernative",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "icapital",
+      "name": "iCapital",
+      "description": "iCapital's DLT platform on Canton sets a new benchmark for data connectivity, standardization, and scale in the Private Markets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/icapital",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "intellecteu",
+      "name": "IntellectEU",
+      "description": "Service & infra provider on Canton; Catalyst Blockchain Manager supports validator ops and app management.",
+      "categories": [
+        "Developer Tools",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/intellecteu",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ipblock-llc",
+      "name": "IPBlock LLC",
+      "description": "Building a blockchain platform to digitize, trade, and collateralize intellectual property, unlocking liquidity and redefining IP as an asset.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ipblock-llc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "j.p.-morgan",
+      "name": "J.P. Morgan",
+      "description": "A leading global financial services firm and founding member of Versana.",
+      "categories": [],
+      "canton_networks": [
+        "broadridge_dlr"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/j.p.-morgan",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "k2f-labs",
+      "name": "K2F Labs",
+      "description": "A research-driven technology firm, focused on building and operating secure, high-performance infrastructure across emerging financial networks.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/k2f-labs",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kaiko",
+      "name": "Kaiko",
+      "description": "Offers institutional-grade crypto data, analytics and indices with regulatory-compliant solutions.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/kaiko",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kairo",
+      "name": "Kairo",
+      "description": "Kairo is a decentralized exchange on Canton Network enabling secure, atomic cross-token trading and unified liquidity for all Canton assets.",
+      "categories": [
+        "Developer Tools",
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/kairo",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kaleido",
+      "name": "Kaleido",
+      "description": "An enterprise-grade blockchain and digital asset platform.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/kaleido",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "keyrock",
+      "name": "Keyrock",
+      "description": "A leading digital asset market maker and liquidity provider.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/keyrock",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kiln",
+      "name": "Kiln",
+      "description": "Leading digital asset rewards platform, enabling institutions to earn or embed rewards functionality in products.",
+      "categories": [
+        "Wallets",
+        "Developer Tools",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/kiln",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "koch-energy-services",
+      "name": "Koch Energy Services",
+      "description": "Koch is pairing natural gas trades on Eleox Ox Pair, using distributed ledger and smart contracts.",
+      "categories": [],
+      "canton_networks": [
+        "eleox"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/koch-energy-services",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "komonode",
+      "name": "komonode",
+      "description": "Secure node validation and community staking solutions.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/komonode",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kpmg",
+      "name": "KPMG",
+      "description": "Provides professional services to innovative clients involved with cryptocurrency, digital assets and blockchain technology.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/kpmg",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kraken",
+      "name": "Kraken",
+      "description": "A centralized exchange that lists and provides trading pairs and related services for Canton Coin",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/kraken",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "kucoin",
+      "name": "KuCoin",
+      "description": "A centralized exchange that lists and provides trading pairs and related services for Canton Coin",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/kucoin",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "lab6174",
+      "name": "Lab6174",
+      "description": "Focuses on building innovative blockchain solutions for decentralized finance and Web3 applications.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/lab6174",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "launchnodes",
+      "name": "Launchnodes",
+      "description": "A non-custodial staking and node-infrastructure provider delivering secure, scalable blockchain connectivity for enterprises.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/launchnodes",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ledger",
+      "name": "Ledger",
+      "description": "A leading wallet provider securing digital assets through hardware-based, self-custody solutions trusted by institutions and individuals worldwide.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ledger",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ledgible",
+      "name": "Ledgible",
+      "description": "Provides cost-basis, tax, and compliance solutions for digital assets, trusted by top US banks, major investment firms, and exchanges.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ledgible",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "lendos",
+      "name": "LendOS",
+      "description": "A commercial lending platform leverages Daml smart contracts and the Canton protocol to deliver a new digital data model and platform for the lending industry.",
+      "categories": [
+        "Financing"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/lendos",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "liberty-city-ventures",
+      "name": "Liberty City Ventures",
+      "description": "Venture capital firm Liberty City Ventures is one of the 30 strategic partners that launched the Canton Network.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/liberty-city-ventures",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "luganodes",
+      "name": "Luganodes",
+      "description": "Luganodes is a leading non-custodial institutional staking provider with $4B+ in assets, 40+ PoS networks, and 99.9% uptime.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/luganodes",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "lukka-inc",
+      "name": "Lukka Inc.",
+      "description": "Supplies data and technology to traditional financial institutions that are at the forefront of the crypto ecosystem.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/lukka-inc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "m1x",
+      "name": "M1X",
+      "description": "M1X develops institutional-grade digital-asset infrastructure and supports on-chain products for trading, collateral, and settlement workflows.",
+      "categories": [
+        "Stablecoins",
+        "Payments",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/m1x",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "maestro",
+      "name": "Maestro",
+      "description": "An enterprise data platform for blockchain infrastructure.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/maestro",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "mercuria-energy-america",
+      "name": "Mercuria Energy America",
+      "description": "Pairing natural gas trades on Eleox Ox Pair, using distributed ledger and smart contracts.",
+      "categories": [],
+      "canton_networks": [
+        "eleox"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/mercuria-energy-america",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "meria",
+      "name": "Meria",
+      "description": "Provides a French AMF-registered crypto platform for managing and investing in cryptoassets.",
+      "categories": [
+        "Custody",
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/meria",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "mexc",
+      "name": "MEXC",
+      "description": "A centralized exchange that lists and provides trading pairs and related services for Canton Coin",
+      "categories": [
+        "Exchanges"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/mexc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "midao",
+      "name": "MiDAO",
+      "description": "Builds decentralized autonomous organizations (DAOs), offering governance and asset management tools.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/midao",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "mintify",
+      "name": "Mintify",
+      "description": "A next-generation, cross-chain digital asset trading platform with infrastructure and services across real-world assets and NFTs.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/mintify",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "moatcapital",
+      "name": "MoatCapital",
+      "description": "A specialized equity asset manager.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/moatcapital",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "monerium",
+      "name": "Monerium",
+      "description": "A pioneer in on-chain fiat. Issues EURe, GBPe, and USDe e-money tokens with FX and crypto services.",
+      "categories": [
+        "Stablecoins",
+        "Payments"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/monerium",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "moodys",
+      "name": "Moody's",
+      "description": "One of the strategic partners that launched the Canton Network and is a member of the Canton Foundation.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/moodys",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "moonshot",
+      "name": "Moonshot",
+      "description": "Blockchain wallet with an incentive driven super app.",
+      "categories": [
+        "Wallets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/moonshot",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "morgan-stanley",
+      "name": "Morgan Stanley",
+      "description": "Morgan Stanley uses Versana, which digitally captures and synchronizes agents' syndicated loan data on a consistent, real-time basis, leveraging Canton.",
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/morgan-stanley",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "mpch",
+      "name": "MPCH",
+      "description": "Specializes in cutting-edge cryptographic storage to secure enterprises' most sensitive digital assets, private keys, secrets and private data.",
+      "categories": [
+        "Forensics & Security",
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/mpch",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "nansen",
+      "name": "Nansen",
+      "description": null,
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/nansen",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "nasdaq",
+      "name": "Nasdaq",
+      "description": "Using Canton & Daml to digitize carbon credits and enable real-time collateral mobility via Calypso integration.",
+      "categories": [
+        "Exchanges",
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/nasdaq",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "nightly-wallet",
+      "name": "Nightly Wallet",
+      "description": "A multi-chain crypto wallet for web and mobile, letting users manage digital assets seamlessly across blockchains",
+      "categories": [
+        "Custody",
+        "Wallets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/nightly-wallet",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "node-fortress",
+      "name": "Node Fortress",
+      "description": "Node Fortress provides real-time insights into the Canton Network through its block explorer, CC Explorer.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/node-fortress",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "node-monster",
+      "name": "Node Monster",
+      "description": "Provides high-performance, institutional-grade node operations to support the Canton ecosystem.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/node-monster",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "novaprime",
+      "name": "Novaprime",
+      "description": "AI-powered Loan Quality Platform on Canton, designed to improve the mortgage process.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/novaprime",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "noves",
+      "name": "Noves",
+      "description": "The Noves Data App is your own private Canton explorer with quick search, filters, and one-click exports for financial reporting, audit, or app integration.",
+      "categories": [
+        "Data & Analytics",
+        "Developer Tools"
+      ],
+      "canton_networks": [],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/noves",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "obligate",
+      "name": "Obligate",
+      "description": "An on-chain digital securities platform, offering an end-to-end infrastructure for issuance and settlement.",
+      "categories": [
+        "Liquidity",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/obligate",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "obsidian-systems",
+      "name": "Obsidian Systems",
+      "description": "Provides enterprise Canton node hosting and builds apps to support liquidity across the ecosystem.",
+      "categories": [
+        "NaaS",
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/obsidian-systems",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "oliver-wyman",
+      "name": "Oliver Wyman",
+      "description": "Providing consultancy, app design, and validation support for Canton Network.",
+      "categories": [
+        "Developer Tools",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/oliver-wyman",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "ownera",
+      "name": "Ownera",
+      "description": "Ownera interconnects the financial services industry with interoperability routers to enable the distribution and trading of tokenized assets.",
+      "categories": [
+        "Interoperability"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/ownera",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "p2p",
+      "name": "P2P",
+      "description": "The platform simplifies staking by handling node operations.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/p2p",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "particula",
       "name": "Particula",
-      "description": "Analytics and data intelligence for Canton",
-      "category": "Analytics",
-      "url": "https://www.canton.network",
-      "github": null,
-      "status": "live",
-      "openSource": false,
-      "cantonFoundry": false,
-      "stack": [
-        "canton-3x"
+      "description": "Provides real-time risk ratings and analytics on Canton, giving issuers and investors independent assessments.",
+      "categories": [
+        "Data & Analytics"
       ],
-      "relatedTo": [],
-      "installCommand": null,
-      "mcpConfig": null,
-      "addedDate": "2026-02-01",
-      "featuredApp": null
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/particula",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "paxos",
+      "name": "Paxos",
+      "description": "Stablecoin provider Paxos is connected to Canton and has participated in network pilots.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/paxos",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "paysafe",
+      "name": "PaySafe",
+      "description": "A global payments platform that enables businesses and consumers to conduct transactions through payment processing, digital wallets, and online cash solutions.",
+      "categories": [
+        "Payments"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/paysafe",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "polychain",
+      "name": "Polychain",
+      "description": "Polychain Capital is a leading crypto investment firm.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/polychain",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "primrose-capital-management",
+      "name": "Primrose Capital Management",
+      "description": "Primrose Capital Management pioneers quantitative strategies for the new era of digital assets.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/primrose-capital-management",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "prometheus",
+      "name": "Prometheus",
+      "description": "Prometheus is a wealth management firm registred in Monaco.",
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/prometheus",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "proof-group",
+      "name": "Proof Group",
+      "description": "A team of former crypto founders and venture investors, backing the next generation. Supports firms in connecting to Canton and provides CantonScan.com",
+      "categories": [
+        "NaaS",
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/proof-group",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "Extracted only from canton.network/ecosystem page content. No inferred data."
+    },
+    {
+      "slug": "puro-earth",
+      "name": "Puro.earth",
+      "description": "Puro.earth operates a carbon removal marketplace, bringing transparency and verification to carbon credits.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/puro-earth",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "rail",
+      "name": "Rail",
+      "description": null,
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/rail",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "s-and-p-global",
+      "name": "S&P Global",
+      "description": null,
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/s-and-p-global",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "sbi-digital-asset-holdings",
+      "name": "SBI Digital Asset Holdings",
+      "description": "SBI DAH oversees and operates digital asset-related businesses under the umbrella of SBI Holdings. SBIDAH is a founding partner of the Canton Network, and a super validator.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/sbi-digital-asset-holdings",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "sekoya-labs",
+      "name": "Sekoya Labs",
+      "description": "Sekoya Labs provides an online platform that simplifies deployment and management of blockchain validator nodes and infrastructure services.",
+      "categories": [
+        "NaaS"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/sekoya-labs",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "send",
+      "name": "Send",
+      "description": "Send is a non-custodial peer-to-peer payments app and creator of CUSD, Canton's first privacy-first stablecoin designed for compliant, global transfers.",
+      "categories": [
+        "Stablecoins",
+        "Payments"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/send",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "shell-energy",
+      "name": "Shell Energy",
+      "description": "Shell Energy is pairing natural gas trades on Eleox Ox Pair, using distributed ledger and smart contracts.",
+      "categories": [],
+      "canton_networks": [
+        "eleox"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/shell-energy",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "societe-generale",
+      "name": "Societe Generale",
+      "description": "Connected to Canton apps like Broadridge DLR, issuing and managing tokenized assets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "broadridge_dlr"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/societe-generale",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "splice-fi",
+      "name": "Splice.fi",
+      "description": null,
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/splice-fi",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "standard-chartered",
+      "name": "Standard Chartered",
+      "description": null,
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/standard-chartered",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "strata",
+      "name": "Strata",
+      "description": null,
+      "categories": [
+        "Developer Tools"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/strata",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "sync-insights",
+      "name": "Sync Insights",
+      "description": "Sync Insights is a proactive AI analytics platform on Canton that provides real-time insights through automated monitoring, alerts, and custom dashboards.",
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/sync-insights",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "t-rize-group",
+      "name": "T-RIZE Group",
+      "description": "T-RIZE Group is reshaping the future of institutional-grade investments through cutting-edge blockchain technology.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/t-rize-group",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "taurus",
+      "name": "Taurus",
+      "description": "Taurus is a digital asset platform to custody, issue and manage cryptocurrencies, tokenized assets and digital currencies and is a member of the Global Synchronizer Foundation.",
+      "categories": [
+        "Custody",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/taurus",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "temple-digital-group",
+      "name": "Temple Digital Group",
+      "description": "Temple powers compliant, privacy-centric trading, asset issuance, and registry services on the Canton Network.",
+      "categories": [
+        "Tokenized Assets",
+        "Exchanges"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/temple-digital-group",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "the-tie",
+      "name": "The Tie",
+      "description": null,
+      "categories": [
+        "Data & Analytics"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/the-tie",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "tradeweb",
+      "name": "Tradeweb",
+      "description": "Tradeweb is a leading builder and operator of electronic marketplaces, with applications on Canton.",
+      "categories": [
+        "Exchanges",
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": true,
+      "source_url": "https://www.canton.network/ecosystem/tradeweb",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "trakx",
+      "name": "Trakx",
+      "description": "Trakx Crypto Tradable Indices (CTIs) are proprietary crypto baskets built with the largest and most liquid digital assets.",
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/trakx",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "trm-labs",
+      "name": "TRM Labs",
+      "description": "TRM Labs provides blockchain intelligence solutions trusted by financial institutions, crypto businesses, and law enforcement.",
+      "categories": [
+        "Forensics & Security",
+        "Compliance"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/trm-labs",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "ubyx",
+      "name": "Ubyx",
+      "description": "Ubyx is a stablecoin clearing system.",
+      "categories": [
+        "Stablecoins",
+        "Payments"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/ubyx",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "umbrage",
+      "name": "Umbrage",
+      "description": null,
+      "categories": [
+        "Developer Tools"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/umbrage",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "union-investment",
+      "name": "Union Investment",
+      "description": "Union Investment was an investor in the EIB's 100 million euro-denominated digitally native bond, the inaugural issuance on GS DAP.",
+      "categories": [],
+      "canton_networks": [
+        "gs_dap"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/union-investment",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "unizen",
+      "name": "Unizen",
+      "description": "The First Private Prediction Market. Short-term prediction markets you can trade privately.",
+      "categories": [],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/unizen",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "usdc",
+      "name": "USDCx",
+      "description": "USDCx is a dollar-denominated stablecoin on Canton, minted when users deposit USDC into xReserve on Ethereum via the protocol.",
+      "categories": [
+        "Stablecoins"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/usdc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "usdm1",
+      "name": "USDM1",
+      "description": "USDM1 is a sovereign USD digital bond, backed 1:1 by Treasuries and structured under NY law for collateral, settlement, yield, repo and close-out netting.",
+      "categories": [
+        "Tokenized Assets",
+        "Stablecoins"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/usdm1",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "usyc",
+      "name": "USYC",
+      "description": null,
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/usyc",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "versana",
+      "name": "Versana",
+      "description": "Versana digitally captures leading agent banks' syndicated loan data on a consistent, real-time basis, providing unprecedented transparency and accuracy into loan-level details and portfolio positions.",
+      "categories": [
+        "Tokenized Assets",
+        "Data & Analytics"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/versana",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "vert-capital",
+      "name": "VERT Capital",
+      "description": null,
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/vert-capital",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "wintermute",
+      "name": "Wintermute",
+      "description": null,
+      "categories": [
+        "Liquidity"
+      ],
+      "canton_networks": [
+        "global_synchronizer"
+      ],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/wintermute",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "xpansiv",
+      "name": "Xpansiv",
+      "description": null,
+      "categories": [
+        "Tokenized Assets"
+      ],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/xpansiv",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
+    },
+    {
+      "slug": "zinnia",
+      "name": "Zinnia",
+      "description": null,
+      "categories": [],
+      "canton_networks": [],
+      "foundation_member": false,
+      "source_url": "https://www.canton.network/ecosystem/zinnia",
+      "scraped_from": "https://www.canton.network/ecosystem",
+      "scraped_at": "2026-02-17T00:00:00Z",
+      "data_note": "From truncated tail of page. Confirmed via web search of canton.network/ecosystem. Badge/category data may be incomplete."
     }
-  ]
+  ],
+  "metadata": {
+    "total": 209,
+    "source": "https://www.canton.network/ecosystem",
+    "scraped_at": "2026-02-17T00:00:00Z",
+    "categories": [
+      "Compliance",
+      "Custody",
+      "Data & Analytics",
+      "Developer Tools",
+      "Exchanges",
+      "Financing",
+      "Forensics & Security",
+      "Interoperability",
+      "Liquidity",
+      "NaaS",
+      "Payments",
+      "Stablecoins",
+      "Tokenized Assets",
+      "Wallets"
+    ],
+    "canton_networks": [
+      "broadridge_dlr",
+      "eleox",
+      "global_synchronizer",
+      "gs_dap",
+      "hkex_synapse"
+    ],
+    "foundation_members": 46
+  }
 }

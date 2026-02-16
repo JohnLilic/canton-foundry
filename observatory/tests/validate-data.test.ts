@@ -36,7 +36,7 @@ function makeMinimalProject(
     website_url: null,
     contact_url: null,
     description: "A test project",
-    category: ["devtools"],
+    category: ["developer-tools"],
     partnerships: [],
     status: "unknown",
     network: [],

@@ -606,16 +606,21 @@ function getMainJS(): string {
   return `
 (function() {
   var CATEGORIES = [
-    'All','defi','tokenization','wallets','devtools','analytics',
-    'infrastructure','bridges','ai','payments','identity',
-    'lending','dex','naas'
+    'All','tokenized-assets','data-analytics','naas',
+    'developer-tools','wallets','exchanges','liquidity',
+    'interoperability','forensics-security','custody',
+    'stablecoins','payments','financing','compliance'
   ];
   var CAT_LABELS = {
-    'All':'All','defi':'DeFi','tokenization':'Tokenization',
-    'wallets':'Wallets','devtools':'DevTools',
-    'analytics':'Analytics','infrastructure':'Infrastructure',
-    'bridges':'Bridges','ai':'AI','payments':'Payments',
-    'identity':'Identity','lending':'Lending','dex':'DEX','naas':'NaaS'
+    'All':'All','tokenized-assets':'Tokenized Assets',
+    'data-analytics':'Data & Analytics','naas':'NaaS',
+    'developer-tools':'Developer Tools','wallets':'Wallets',
+    'exchanges':'Exchanges','liquidity':'Liquidity',
+    'interoperability':'Interoperability',
+    'forensics-security':'Forensics & Security',
+    'custody':'Custody','stablecoins':'Stablecoins',
+    'payments':'Payments','financing':'Financing',
+    'compliance':'Compliance'
   };
 
   var searchInput = document.getElementById('search');

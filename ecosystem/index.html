@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Canton Ecosystem — Every tool, app, and service on Canton Network</title>
-  <meta name="description" content="A searchable directory of every tool, app, wallet, and service in the Canton Network ecosystem. Curated by Canton Foundry.">
+  <title>Canton Ecosystem — Every project on Canton Network</title>
+  <meta name="description" content="A searchable directory of every project, service, and institution in the Canton Network ecosystem. Sourced from canton.network.">
   <meta property="og:title" content="Canton Ecosystem">
-  <meta property="og:description" content="Every tool, app, and service on Canton Network">
+  <meta property="og:description" content="Every project on Canton Network — sourced from canton.network">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://johnlilic.github.io/canton-foundry/ecosystem/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='0' y='16' width='16' height='16' rx='2.5' fill='%23e0e0e0' opacity='0.3'/><rect x='8' y='8' width='16' height='16' rx='2.5' fill='%23e0e0e0' opacity='0.6'/><rect x='16' y='0' width='16' height='16' rx='2.5' fill='%23e0e0e0'/></svg>">
@@ -25,13 +25,12 @@
       --faint: #444;
       --hover: #fff;
       --nav-bg: rgba(12, 12, 12, 0.85);
-      --copied: #6b7;
       --accent: #c8a445;
       --accent-dim: rgba(200, 164, 69, 0.15);
       --green: #4ade80;
       --green-bg: rgba(74, 222, 128, 0.1);
-      --yellow: #facc15;
-      --yellow-bg: rgba(250, 204, 21, 0.1);
+      --blue: #60a5fa;
+      --blue-bg: rgba(96, 165, 250, 0.1);
       --mono: 'JetBrains Mono', monospace;
       --sans: 'Inter', -apple-system, sans-serif;
       --max-w: 960px;
@@ -46,11 +45,10 @@
       --faint: #999;
       --hover: #000;
       --nav-bg: rgba(250, 250, 250, 0.85);
-      --copied: #2a7;
       --accent: #9a7a20;
       --accent-dim: rgba(154, 122, 32, 0.12);
       --green-bg: rgba(34, 160, 80, 0.08);
-      --yellow-bg: rgba(200, 164, 21, 0.08);
+      --blue-bg: rgba(37, 99, 235, 0.08);
     }
 
     html { scroll-behavior: smooth; }
@@ -174,7 +172,16 @@
     .hero .tagline {
       font-size: 16px;
       color: var(--dim);
-      margin-bottom: 0;
+      margin-bottom: 4px;
+    }
+    .hero .source {
+      font-size: 12px;
+      color: var(--faint);
+    }
+    .hero .source a {
+      color: var(--dim);
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
 
     /* Stats bar */
@@ -185,6 +192,7 @@
     .stats-inner {
       display: flex;
       gap: 32px;
+      flex-wrap: wrap;
     }
     .stat {
       display: flex;
@@ -199,53 +207,6 @@
     }
     .stat-label {
       font-size: 13px;
-      color: var(--dim);
-    }
-
-    /* New this week */
-    .new-this-week {
-      padding: 32px 0;
-      border-bottom: 1px solid var(--border);
-      display: none;
-    }
-    .new-this-week.visible { display: block; }
-    .ntw-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 16px;
-    }
-    .ntw-scroll {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      padding-bottom: 8px;
-      scrollbar-width: thin;
-      scrollbar-color: var(--border) transparent;
-    }
-    .ntw-scroll::-webkit-scrollbar { height: 4px; }
-    .ntw-scroll::-webkit-scrollbar-track { background: transparent; }
-    .ntw-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-    .ntw-card {
-      flex-shrink: 0;
-      padding: 12px 16px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: var(--surface);
-      min-width: 220px;
-      cursor: default;
-      transition: border-color 0.15s;
-    }
-    .ntw-card:hover { border-color: var(--dim); }
-    .ntw-card-name {
-      font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 2px;
-    }
-    .ntw-card-desc {
-      font-size: 12px;
       color: var(--dim);
     }
 
@@ -310,18 +271,18 @@
       gap: 12px;
       flex-wrap: wrap;
     }
-    .stack-filters {
+    .network-filters {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
     }
-    .stack-label {
+    .network-label {
       font-size: 12px;
       color: var(--faint);
       margin-right: 4px;
     }
-    .stack-check {
+    .network-check {
       display: flex;
       align-items: center;
       gap: 4px;
@@ -329,7 +290,7 @@
       color: var(--dim);
       cursor: pointer;
     }
-    .stack-check input {
+    .network-check input {
       accent-color: var(--accent);
       cursor: pointer;
     }
@@ -368,11 +329,10 @@
       padding: 20px;
       border-bottom: 1px solid var(--border);
       border-right: 1px solid var(--border);
-      transition: opacity 0.25s, background 0.15s;
+      transition: background 0.15s;
       position: relative;
     }
     .card:nth-child(2n) { border-right: none; }
-    .card.dimmed { opacity: 0.35; }
     .card:hover { background: var(--surface); }
     .card-header {
       display: flex;
@@ -388,7 +348,7 @@
     }
     .card-badges {
       display: flex;
-      gap: 6px;
+      gap: 4px;
       flex-shrink: 0;
       flex-wrap: wrap;
       justify-content: flex-end;
@@ -402,62 +362,11 @@
       text-transform: uppercase;
       letter-spacing: 0.03em;
     }
-    .badge-live {
+    .badge-foundation {
       color: var(--green);
       background: var(--green-bg);
       border: 1px solid rgba(74, 222, 128, 0.2);
     }
-    .badge-beta {
-      color: var(--yellow);
-      background: var(--yellow-bg);
-      border: 1px solid rgba(250, 204, 21, 0.2);
-    }
-    .badge-coming-soon {
-      color: var(--dim);
-      background: var(--surface);
-      border: 1px solid var(--border);
-    }
-    .badge-oss {
-      color: var(--dim);
-      background: none;
-      border: 1px solid var(--border);
-    }
-    .badge-cf {
-      color: var(--accent);
-      background: var(--accent-dim);
-      border: 1px solid rgba(200, 164, 69, 0.3);
-    }
-    .badge-featured {
-      color: var(--accent);
-      background: var(--accent-dim);
-      border: 1px solid rgba(200, 164, 69, 0.3);
-      cursor: help;
-      position: relative;
-    }
-    .badge-featured .star {
-      margin-right: 2px;
-    }
-    .badge-featured .tip {
-      display: none;
-      position: absolute;
-      top: calc(100% + 6px);
-      right: 0;
-      width: 280px;
-      padding: 10px 12px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      font-size: 11px;
-      font-family: var(--sans);
-      line-height: 1.5;
-      color: var(--dim);
-      text-transform: none;
-      letter-spacing: 0;
-      white-space: normal;
-      z-index: 60;
-      pointer-events: none;
-    }
-    .badge-featured:hover .tip { display: block; }
     .card-cat {
       font-size: 11px;
       color: var(--faint);
@@ -469,13 +378,13 @@
       margin-bottom: 10px;
       line-height: 1.5;
     }
-    .card-stack {
+    .card-networks {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
       margin-bottom: 10px;
     }
-    .stack-tag {
+    .net-tag {
       font-size: 10px;
       font-family: var(--mono);
       padding: 1px 6px;
@@ -483,18 +392,6 @@
       border-radius: 2px;
       color: var(--faint);
     }
-    .card-related {
-      font-size: 12px;
-      color: var(--faint);
-      margin-bottom: 10px;
-    }
-    .card-related a {
-      color: var(--dim);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      text-decoration-color: var(--border);
-    }
-    .card-related a:hover { color: var(--text); text-decoration-color: var(--dim); }
     .card-actions {
       display: flex;
       gap: 6px;
@@ -520,10 +417,6 @@
       border-color: var(--dim);
       background: var(--surface);
     }
-    .card-btn.copied-state {
-      color: var(--copied);
-      border-color: var(--copied);
-    }
 
     /* No results */
     .no-results {
@@ -533,106 +426,6 @@
       font-size: 14px;
       display: none;
       grid-column: 1 / -1;
-    }
-
-    /* Gaps section */
-    .gaps {
-      padding: 60px 0;
-      border-top: 1px solid var(--border);
-    }
-    .section-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--faint);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 24px;
-    }
-    .gaps-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    .gap-card {
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-    }
-    .gap-card:nth-child(2n) { border-right: none; }
-    .gap-card:last-child { border-bottom: none; }
-    .gap-card:nth-last-child(2):nth-child(odd) { border-bottom: none; }
-    .gap-card h3 {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-    .gap-card p {
-      font-size: 12px;
-      color: var(--dim);
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-    .gap-card a {
-      font-size: 11px;
-      font-family: var(--mono);
-      color: var(--faint);
-    }
-    .gap-card a:hover { color: var(--text); }
-
-    /* Floating button */
-    .fab {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      z-index: 80;
-      padding: 10px 16px;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: var(--surface);
-      color: var(--dim);
-      font-family: var(--sans);
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.15s;
-      animation: fab-pulse 3s ease-in-out infinite;
-    }
-    .fab:hover {
-      color: var(--text);
-      border-color: var(--dim);
-      animation: none;
-    }
-    @keyframes fab-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(200, 164, 69, 0); }
-      50% { box-shadow: 0 0 0 4px rgba(200, 164, 69, 0.08); }
-    }
-
-    /* Toast */
-    .toast {
-      position: fixed;
-      bottom: 72px;
-      right: 24px;
-      z-index: 200;
-      padding: 8px 16px;
-      border: 1px solid var(--copied);
-      border-radius: 4px;
-      background: var(--surface);
-      color: var(--copied);
-      font-family: var(--mono);
-      font-size: 12px;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: all 0.2s;
-      pointer-events: none;
-    }
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     /* Footer */
@@ -665,9 +458,6 @@
       .stats-inner { flex-wrap: wrap; gap: 16px; }
       .results-grid { grid-template-columns: 1fr; }
       .card { border-right: none; }
-      .gaps-grid { grid-template-columns: 1fr; }
-      .gap-card { border-right: none; }
-      .gap-card:last-child { border-bottom: none; }
       .filters { position: static; }
       .card-actions { opacity: 1; }
     }
@@ -677,7 +467,6 @@
       .card:hover .card-actions { opacity: 1; }
     }
 
-    /* noscript fallback */
     .noscript-msg {
       padding: 20px;
       text-align: center;
@@ -714,6 +503,7 @@
     <a href="../">Home</a>
     <a href="../#tools">Tools</a>
     <a href="../#guide">Guide</a>
+    <a href="../observatory/">Observatory</a>
     <a href="../#about">About</a>
     <a href="../#resources">Resources</a>
     <a href="https://github.com/JohnLilic" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -722,7 +512,8 @@
   <div class="hero">
     <div class="wrap">
       <h1>Canton Ecosystem</h1>
-      <p class="tagline">Every tool, app, and service on Canton Network</p>
+      <p class="tagline">Every project on Canton Network</p>
+      <p class="source">Data sourced from <a href="https://www.canton.network/ecosystem" target="_blank" rel="noopener noreferrer">canton.network/ecosystem</a></p>
     </div>
   </div>
 
@@ -731,15 +522,9 @@
       <div class="stats-inner">
         <div class="stat"><span class="stat-num" id="statTotal">0</span><span class="stat-label">Projects</span></div>
         <div class="stat"><span class="stat-num" id="statCats">0</span><span class="stat-label">Categories</span></div>
-        <div class="stat"><span class="stat-num" id="statOSS">0</span><span class="stat-label">Open Source</span></div>
+        <div class="stat"><span class="stat-num" id="statFoundation">0</span><span class="stat-label">Foundation Members</span></div>
+        <div class="stat"><span class="stat-num" id="statNetworks">0</span><span class="stat-label">Networks</span></div>
       </div>
-    </div>
-  </div>
-
-  <div class="new-this-week" id="ntwSection">
-    <div class="wrap">
-      <div class="ntw-title">New this week</div>
-      <div class="ntw-scroll" id="ntwScroll"></div>
     </div>
   </div>
 
@@ -750,14 +535,13 @@
       </div>
       <div class="filter-row" id="categoryPills" role="tablist" aria-label="Filter by category"></div>
       <div class="controls-row">
-        <div class="stack-filters" id="stackFilters">
-          <span class="stack-label">My Stack:</span>
+        <div class="network-filters" id="networkFilters">
+          <span class="network-label">Network:</span>
         </div>
         <div style="display:flex;align-items:center;gap:8px;">
           <span class="active-count" id="activeCount"></span>
           <select class="sort-select" id="sortSelect" aria-label="Sort projects">
             <option value="az">A&ndash;Z</option>
-            <option value="newest">Newest</option>
             <option value="category">Category</option>
           </select>
         </div>
@@ -772,57 +556,10 @@
     </div>
   </div>
 
-  <div class="gaps">
-    <div class="wrap">
-      <div class="section-title">What's missing</div>
-      <div class="gaps-grid">
-        <div class="gap-card">
-          <h3>Portfolio Tracker</h3>
-          <p>No dedicated portfolio management tool exists for Canton assets yet.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+Portfolio+Tracker" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>Mobile Wallet SDK</h3>
-          <p>Native iOS/Android SDKs for building Canton wallet integrations.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+Mobile+Wallet+SDK" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>Indexer / Subgraph</h3>
-          <p>A Graph Protocol-style indexing service for querying Canton state.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+Indexer" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>Faucet / Testnet Tools</h3>
-          <p>Public faucet and developer tooling for Canton testnet environments.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+Faucet" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>Daml LSP Extensions</h3>
-          <p>Enhanced IDE support beyond the official Daml extension — snippets, debugger, test runner.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+Daml+LSP" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>NFT / Digital Asset Marketplace</h3>
-          <p>A marketplace for minting and trading unique digital assets on Canton.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+NFT+Marketplace" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-        <div class="gap-card">
-          <h3>FeaturedAppActivityMarker Helper</h3>
-          <p>No open-source library exists to simplify integrating FeaturedAppActivityMarker into Daml contracts. Developers must manually query the FeaturedAppRight interface (package ID 7804375fe...) and create markers for each qualifying transaction.</p>
-          <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new?template=tool-request.md&title=Tool+Request:+FeaturedAppActivityMarker+Helper" target="_blank" rel="noopener noreferrer">Request this &nearr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <a href="https://github.com/JohnLilic/canton-ecosystem/issues/new" target="_blank" rel="noopener noreferrer" class="fab" aria-label="Request a tool">+ Request a Tool</a>
-
-  <div class="toast" id="toast">Copied!</div>
-
   <footer>
     <div class="footer-inner wrap">
-      <p>Curated by <a href="../" style="display:inline-flex;align-items:center;gap:5px"><svg width="12" height="12" viewBox="0 0 32 32" fill="currentColor"><rect x="0" y="16" width="16" height="16" rx="2.5" opacity="0.25"/><rect x="8" y="8" width="16" height="16" rx="2.5" opacity="0.5"/><rect x="16" y="0" width="16" height="16" rx="2.5"/></svg>Canton Foundry</a></p>
-      <p><a href="https://github.com/JohnLilic/canton-ecosystem" target="_blank" rel="noopener noreferrer">GitHub</a> &middot; <a href="https://github.com/JohnLilic/canton-ecosystem/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Submit your tool</a> &middot; BSD-0-Clause</p>
+      <p>Curated by <a href="../" style="display:inline-flex;align-items:center;gap:5px"><svg width="12" height="12" viewBox="0 0 32 32" fill="currentColor"><rect x="0" y="16" width="16" height="16" rx="2.5" opacity="0.25"/><rect x="8" y="8" width="16" height="16" rx="2.5" opacity="0.5"/><rect x="16" y="0" width="16" height="16" rx="2.5"/></svg>Canton Foundry</a> &middot; Data from <a href="https://www.canton.network/ecosystem" target="_blank" rel="noopener noreferrer">canton.network</a></p>
+      <p><a href="https://github.com/JohnLilic/canton-foundry" target="_blank" rel="noopener noreferrer">GitHub</a> &middot; BSD-0-Clause</p>
     </div>
   </footer>
 
@@ -850,54 +587,34 @@
       a.addEventListener('click', function() { mm.classList.remove('open'); });
     });
 
-    /* Toast */
-    var toastEl = document.getElementById('toast');
-    var toastTimer = null;
-    function showToast(msg) {
-      toastEl.textContent = msg || 'Copied!';
-      toastEl.classList.add('show');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(function() {
-        toastEl.classList.remove('show');
-      }, 1800);
-    }
-
-    /* Clipboard */
-    function copyText(text, btnEl) {
-      navigator.clipboard.writeText(text).then(function() {
-        showToast('Copied!');
-        if (btnEl) {
-          btnEl.classList.add('copied-state');
-          var orig = btnEl.textContent;
-          btnEl.textContent = 'Copied!';
-          setTimeout(function() {
-            btnEl.classList.remove('copied-state');
-            btnEl.textContent = orig;
-          }, 1800);
-        }
-      });
-    }
-
-    /* Categories & stacks */
+    /* Categories from canton.network */
     var CATEGORIES = [
-      'All', 'Featured Apps', 'DeFi', 'Wallets', 'DevTools', 'Analytics',
-      'Bridges', 'AI', 'Tokenization', 'NaaS',
-      'Infrastructure', 'Lending', 'DEX', 'Payments', 'Identity'
+      'All', 'Foundation Members',
+      'Tokenized Assets', 'Liquidity', 'NaaS',
+      'Data & Analytics', 'Developer Tools', 'Exchanges',
+      'Wallets', 'Payments', 'Custody', 'Financing',
+      'Stablecoins', 'Interoperability', 'Compliance',
+      'Forensics & Security'
     ];
-    var STACKS = [
-      'TypeScript', 'Java', 'Python', 'Daml',
-      'gRPC', 'JSON API', 'Canton 2.x', 'Canton 3.x'
-    ];
-    var STACK_KEYS = [
-      'typescript', 'java', 'python', 'daml',
-      'grpc', 'json-api', 'canton-2x', 'canton-3x'
+
+    /* Network display names */
+    var NETWORK_LABELS = {
+      'global_synchronizer': 'Global Synchronizer',
+      'gs_dap': 'GS DAP',
+      'broadridge_dlr': 'Broadridge DLR',
+      'hkex_synapse': 'HKEX Synapse',
+      'eleox': 'Eleox'
+    };
+    var NETWORK_KEYS = [
+      'global_synchronizer', 'gs_dap',
+      'broadridge_dlr', 'hkex_synapse', 'eleox'
     ];
 
     /* State */
     var projects = [];
     var activeCategory = 'All';
     var searchQuery = '';
-    var activeStacks = [];
+    var activeNetworks = [];
     var sortMode = 'az';
 
     /* Init category pills */
@@ -920,25 +637,29 @@
       pillsContainer.appendChild(btn);
     });
 
-    /* Init stack filters */
-    var stackContainer = document.getElementById('stackFilters');
-    STACKS.forEach(function(label, i) {
+    /* Init network filters */
+    var networkContainer = document.getElementById('networkFilters');
+    NETWORK_KEYS.forEach(function(key) {
       var lbl = document.createElement('label');
-      lbl.className = 'stack-check';
+      lbl.className = 'network-check';
       var cb = document.createElement('input');
       cb.type = 'checkbox';
-      cb.value = STACK_KEYS[i];
+      cb.value = key;
       cb.addEventListener('change', function() {
         if (cb.checked) {
-          activeStacks.push(cb.value);
+          activeNetworks.push(cb.value);
         } else {
-          activeStacks = activeStacks.filter(function(s) { return s !== cb.value; });
+          activeNetworks = activeNetworks.filter(function(n) {
+            return n !== cb.value;
+          });
         }
         render();
       });
       lbl.appendChild(cb);
-      lbl.appendChild(document.createTextNode(label));
-      stackContainer.appendChild(lbl);
+      lbl.appendChild(document.createTextNode(
+        NETWORK_LABELS[key] || key
+      ));
+      networkContainer.appendChild(lbl);
     });
 
     /* Search */
@@ -962,76 +683,82 @@
     /* Filter & render */
     function getFiltered() {
       var filtered = projects.filter(function(p) {
-        if (activeCategory === 'Featured Apps') {
-          if (p.featuredApp !== true) return false;
-        } else if (activeCategory !== 'All' && p.category !== activeCategory) return false;
+        if (activeCategory === 'Foundation Members') {
+          if (!p.foundation_member) return false;
+        } else if (activeCategory !== 'All') {
+          if (p.categories.indexOf(activeCategory) === -1) {
+            return false;
+          }
+        }
         if (searchQuery) {
-          var hay = (p.name + ' ' + p.description).toLowerCase();
+          var hay = (p.name + ' ' + (p.description || ''))
+            .toLowerCase();
           if (hay.indexOf(searchQuery) === -1) return false;
+        }
+        if (activeNetworks.length > 0) {
+          var hasNet = activeNetworks.some(function(n) {
+            return p.canton_networks.indexOf(n) !== -1;
+          });
+          if (!hasNet) return false;
         }
         return true;
       });
 
       filtered.sort(function(a, b) {
-        if (sortMode === 'az') return a.name.localeCompare(b.name);
-        if (sortMode === 'newest') return (b.addedDate || '').localeCompare(a.addedDate || '');
-        if (sortMode === 'category') return a.category.localeCompare(b.category) || a.name.localeCompare(b.name);
+        if (sortMode === 'az') {
+          return a.name.localeCompare(b.name);
+        }
+        if (sortMode === 'category') {
+          var catA = a.categories[0] || '';
+          var catB = b.categories[0] || '';
+          return catA.localeCompare(catB) ||
+            a.name.localeCompare(b.name);
+        }
         return 0;
       });
 
       return filtered;
     }
 
-    function buildCard(p, stackHighlight) {
-      var dimmed = stackHighlight && !hasStack(p);
-      var html = '<div class="card' + (dimmed ? ' dimmed' : '') + '" data-name="' + esc(p.name) + '">';
+    function buildCard(p) {
+      var html = '<div class="card" data-slug="' +
+        esc(p.slug) + '">';
 
       html += '<div class="card-header">';
-      html += '<span class="card-name">' + esc(p.name) + '</span>';
+      html += '<span class="card-name">' +
+        esc(p.name) + '</span>';
       html += '<div class="card-badges">';
-      if (p.status === 'live') html += '<span class="badge badge-live">Live</span>';
-      else if (p.status === 'beta') html += '<span class="badge badge-beta">Beta</span>';
-      else html += '<span class="badge badge-coming-soon">Soon</span>';
-      if (p.openSource) html += '<span class="badge badge-oss">OSS</span>';
-      if (p.cantonFoundry) html += '<span class="badge badge-cf">Canton Foundry</span>';
-      if (p.featuredApp === true) html += '<span class="badge badge-featured"><span class="star">\u2605</span>Featured App<span class="tip">Earns Canton Coin rewards via FeaturedAppActivityMarker \u2014 apps receive ~$1 additional minting weight per economically important transaction</span></span>';
+      if (p.foundation_member) {
+        html += '<span class="badge badge-foundation">' +
+          'Foundation</span>';
+      }
       html += '</div></div>';
 
-      html += '<div class="card-cat">' + esc(p.category) + '</div>';
-      html += '<div class="card-desc">' + esc(p.description) + '</div>';
+      if (p.categories.length > 0) {
+        html += '<div class="card-cat">' +
+          esc(p.categories.join(' · ')) + '</div>';
+      }
 
-      if (p.stack && p.stack.length > 0) {
-        html += '<div class="card-stack">';
-        p.stack.forEach(function(s) {
-          html += '<span class="stack-tag">' + esc(stackLabel(s)) + '</span>';
+      if (p.description) {
+        html += '<div class="card-desc">' +
+          esc(p.description) + '</div>';
+      }
+
+      if (p.canton_networks.length > 0) {
+        html += '<div class="card-networks">';
+        p.canton_networks.forEach(function(n) {
+          html += '<span class="net-tag">' +
+            esc(NETWORK_LABELS[n] || n) + '</span>';
         });
         html += '</div>';
       }
 
-      if (p.relatedTo && p.relatedTo.length > 0) {
-        html += '<div class="card-related">Works with ';
-        html += p.relatedTo.map(function(r) {
-          return '<a href="#" data-related="' + esc(r) + '">' + esc(r) + '</a>';
-        }).join(', ');
-        html += '</div>';
-      }
-
       html += '<div class="card-actions">';
-      if (p.openSource && p.github) {
-        var cloneCmd = 'git clone ' + p.github + '.git';
-        html += '<button class="card-btn" data-copy="' + esc(cloneCmd) + '" aria-label="Copy clone command">Clone</button>';
-      }
-      if (p.installCommand) {
-        html += '<button class="card-btn" data-copy="' + esc(p.installCommand) + '" aria-label="Copy install command">Try it</button>';
-      }
-      if (p.mcpConfig) {
-        html += '<button class="card-btn" data-copy="' + esc(p.mcpConfig) + '" aria-label="Copy MCP config">Add MCP</button>';
-      }
-      if (p.url) {
-        html += '<a class="card-btn" href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer">Visit</a>';
-      }
-      if (p.github) {
-        html += '<a class="card-btn" href="' + esc(p.github) + '" target="_blank" rel="noopener noreferrer">GitHub</a>';
+      if (p.source_url) {
+        html += '<a class="card-btn" href="' +
+          esc(p.source_url) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          'View on Canton &nearr;</a>';
       }
       html += '</div>';
 
@@ -1039,17 +766,10 @@
       return html;
     }
 
-    function hasStack(p) {
-      if (!activeStacks.length) return true;
-      if (!p.stack) return false;
-      return activeStacks.some(function(s) { return p.stack.indexOf(s) !== -1; });
-    }
-
     function render() {
       var filtered = getFiltered();
       var grid = document.getElementById('resultsGrid');
       var noRes = document.getElementById('noResults');
-      var stackHighlight = activeStacks.length > 0;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
@@ -1057,76 +777,45 @@
       } else {
         noRes.style.display = 'none';
         grid.innerHTML = filtered.map(function(p) {
-          return buildCard(p, stackHighlight);
+          return buildCard(p);
         }).join('');
       }
 
-      /* Bind copy buttons */
-      grid.querySelectorAll('[data-copy]').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          copyText(btn.getAttribute('data-copy'), btn);
-        });
-      });
-
-      /* Bind related links */
-      grid.querySelectorAll('[data-related]').forEach(function(a) {
-        a.addEventListener('click', function(e) {
-          e.preventDefault();
-          var name = a.getAttribute('data-related');
-          searchInput.value = name;
-          searchQuery = name.toLowerCase();
-          activeCategory = 'All';
-          pillsContainer.querySelectorAll('.pill').forEach(function(p) {
-            var isAll = p.textContent === 'All';
-            p.classList.toggle('active', isAll);
-            p.setAttribute('aria-selected', isAll ? 'true' : 'false');
-          });
-          render();
-          window.scrollTo({ top: document.getElementById('filtersBar').offsetTop - 60, behavior: 'smooth' });
-        });
-      });
-
       /* Update stats */
-      var cats = new Set(filtered.map(function(p) { return p.category; }));
-      var oss = filtered.filter(function(p) { return p.openSource; }).length;
-      document.getElementById('statTotal').textContent = filtered.length;
-      document.getElementById('statCats').textContent = cats.size;
-      document.getElementById('statOSS').textContent = oss;
+      document.getElementById('statTotal')
+        .textContent = filtered.length;
+      var allCats = new Set();
+      filtered.forEach(function(p) {
+        p.categories.forEach(function(c) { allCats.add(c); });
+      });
+      document.getElementById('statCats')
+        .textContent = allCats.size;
+      document.getElementById('statFoundation')
+        .textContent = filtered.filter(function(p) {
+          return p.foundation_member;
+        }).length;
+      var allNets = new Set();
+      filtered.forEach(function(p) {
+        p.canton_networks.forEach(function(n) {
+          allNets.add(n);
+        });
+      });
+      document.getElementById('statNetworks')
+        .textContent = allNets.size;
 
       /* Active filter count */
       var count = 0;
       if (activeCategory !== 'All') count++;
       if (searchQuery) count++;
-      count += activeStacks.length;
+      count += activeNetworks.length;
       var badge = document.getElementById('activeCount');
       if (count > 0) {
-        badge.textContent = count + ' filter' + (count > 1 ? 's' : '');
+        badge.textContent = count +
+          ' filter' + (count > 1 ? 's' : '');
         badge.classList.add('visible');
       } else {
         badge.classList.remove('visible');
       }
-    }
-
-    /* New this week */
-    function renderNewThisWeek() {
-      var now = new Date();
-      var week = 7 * 24 * 60 * 60 * 1000;
-      var recent = projects.filter(function(p) {
-        if (!p.addedDate) return false;
-        var d = new Date(p.addedDate);
-        return (now - d) < week;
-      });
-      var section = document.getElementById('ntwSection');
-      if (recent.length === 0) {
-        section.classList.remove('visible');
-        return;
-      }
-      section.classList.add('visible');
-      var scroll = document.getElementById('ntwScroll');
-      scroll.innerHTML = recent.map(function(p) {
-        return '<div class="ntw-card"><div class="ntw-card-name">' + esc(p.name) + '</div><div class="ntw-card-desc">' + esc(p.description) + '</div></div>';
-      }).join('');
     }
 
     /* Helpers */
@@ -1137,27 +826,18 @@
       return d.innerHTML;
     }
 
-    function stackLabel(key) {
-      var map = {
-        'typescript': 'TypeScript', 'java': 'Java',
-        'python': 'Python', 'daml': 'Daml',
-        'grpc': 'gRPC', 'json-api': 'JSON API',
-        'canton-2x': 'Canton 2.x', 'canton-3x': 'Canton 3.x'
-      };
-      return map[key] || key;
-    }
-
     /* Load data */
     fetch('ecosystem.json')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         projects = data.projects || [];
         render();
-        renderNewThisWeek();
       })
-      .catch(function(err) {
-        document.getElementById('noResults').style.display = 'block';
-        document.getElementById('noResults').textContent = 'Failed to load ecosystem data.';
+      .catch(function() {
+        document.getElementById('noResults')
+          .style.display = 'block';
+        document.getElementById('noResults')
+          .textContent = 'Failed to load ecosystem data.';
       });
   </script>
 </body>

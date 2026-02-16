@@ -1,34 +1,36 @@
 export type ConfidenceTier = "verified" | "self_reported" | "auto_detected";
 
 export type Category =
-  | "defi"
-  | "tokenization"
+  | "tokenized-assets"
+  | "data-analytics"
+  | "naas"
+  | "developer-tools"
   | "wallets"
-  | "devtools"
-  | "analytics"
-  | "infrastructure"
-  | "bridges"
-  | "ai"
+  | "exchanges"
+  | "liquidity"
+  | "interoperability"
+  | "forensics-security"
+  | "custody"
+  | "stablecoins"
   | "payments"
-  | "identity"
-  | "lending"
-  | "dex"
-  | "naas";
+  | "financing"
+  | "compliance";
 
 export const VALID_CATEGORIES: Category[] = [
-  "defi",
-  "tokenization",
-  "wallets",
-  "devtools",
-  "analytics",
-  "infrastructure",
-  "bridges",
-  "ai",
-  "payments",
-  "identity",
-  "lending",
-  "dex",
+  "tokenized-assets",
+  "data-analytics",
   "naas",
+  "developer-tools",
+  "wallets",
+  "exchanges",
+  "liquidity",
+  "interoperability",
+  "forensics-security",
+  "custody",
+  "stablecoins",
+  "payments",
+  "financing",
+  "compliance",
 ];
 
 export interface SecurityAudit {

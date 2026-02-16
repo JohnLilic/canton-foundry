@@ -1,7 +1,7 @@
 /**
- * Migrate existing ecosystem.json to Observatory format.
- * Converts ~62 projects from the simple ecosystem directory
- * format to the full ObservatoryProject schema.
+ * Migrate ecosystem.json (sourced from canton.network)
+ * to Observatory format. Converts ~209 projects from the
+ * canton.network scrape format to ObservatoryProject schema.
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
@@ -12,136 +12,141 @@ import type {
   Category,
   ConfidenceTier,
 } from "./types.js";
-import { VALID_CATEGORIES } from "./types.js";
 import { validateDataset } from "./validate-data.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-interface EcosystemProject {
+interface CantonNetworkProject {
+  slug: string;
   name: string;
-  description: string;
-  category: string;
-  url: string | null;
-  github: string | null;
-  status: string;
-  openSource: boolean;
-  cantonFoundry: boolean;
-  stack: string[];
-  relatedTo: string[];
-  installCommand: string | null;
-  mcpConfig: string | null;
-  addedDate: string;
-  featuredApp: boolean | null;
+  description: string | null;
+  categories: string[];
+  canton_networks: string[];
+  foundation_member: boolean;
+  source_url: string;
+  scraped_from: string;
+  scraped_at: string;
+  data_note: string;
 }
 
 const CATEGORY_MAP: Record<string, Category> = {
-  DeFi: "defi",
-  DEX: "dex",
-  Lending: "lending",
-  Tokenization: "tokenization",
-  Wallets: "wallets",
-  DevTools: "devtools",
-  Analytics: "analytics",
-  Infrastructure: "infrastructure",
-  Bridges: "bridges",
-  AI: "ai",
-  Payments: "payments",
-  Identity: "identity",
+  "Tokenized Assets": "tokenized-assets",
+  "Data & Analytics": "data-analytics",
   NaaS: "naas",
+  "Developer Tools": "developer-tools",
+  Wallets: "wallets",
+  Exchanges: "exchanges",
+  Liquidity: "liquidity",
+  Interoperability: "interoperability",
+  "Forensics & Security": "forensics-security",
+  Custody: "custody",
+  Stablecoins: "stablecoins",
+  Payments: "payments",
+  Financing: "financing",
+  Compliance: "compliance",
 };
 
-function slugify(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-function mapCategory(cat: string): Category {
-  const mapped = CATEGORY_MAP[cat];
-  if (!mapped) {
-    console.warn(`Unknown category: "${cat}", defaulting to "infrastructure"`);
-    return "infrastructure";
+function mapCategories(cats: string[]): Category[] {
+  const mapped: Category[] = [];
+  for (const cat of cats) {
+    const m = CATEGORY_MAP[cat];
+    if (m) {
+      mapped.push(m);
+    } else {
+      console.warn(
+        `Unknown category: "${cat}", skipping`,
+      );
+    }
+  }
+  if (mapped.length === 0) {
+    return ["naas"];
   }
   return mapped;
 }
 
+function sanitizeSlug(slug: string): string {
+  return slug
+    .replace(/\./g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-{2,}/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 function convertProject(
-  src: EcosystemProject,
+  src: CantonNetworkProject,
   now: string,
 ): ObservatoryProject {
-  const projectId = slugify(src.name);
-  const category = mapCategory(src.category);
-  const isFeatured = src.featuredApp === true;
+  const categories = mapCategories(src.categories);
+  const description = src.description
+    ? src.description.substring(0, 280)
+    : `${src.name} — Canton Network ecosystem participant`;
 
-  const confidence: Record<string, ConfidenceTier | null> = {
-    display_name: "verified",
-    entity_name: null,
-    entity_jurisdiction: null,
-    foundation_member: "verified",
-    validator_status: "verified",
-    website_url: src.url ? "self_reported" : null,
-    contact_url: null,
-    description: "self_reported",
-    status: "self_reported",
-    network: null,
-    canton_sdk_version: null,
-    last_verified_activity: null,
-    launch_date: null,
-    featured_app: isFeatured ? "verified" : null,
-    open_source: "verified",
-    repo_url: src.github ? "verified" : null,
-    license_type: null,
-    security_audit: null,
-    has_tests: null,
-    test_count: null,
-    has_ci: null,
-    ci_status: null,
-    has_documentation: "self_reported",
-    documentation_url: null,
-    tech_stack: src.stack.length > 0 ? "self_reported" : null,
-    tx_count_30d: null,
-    tx_count_90d: null,
-    unique_parties_30d: null,
-    cc_burned_30d: null,
-    featured_markers_30d: null,
-    onchain_since: null,
-  };
-
-  // For non-null featured_app false, set confidence
-  if (src.featuredApp === false) {
-    confidence["featured_app"] = "verified";
-  }
+  const confidence: Record<string, ConfidenceTier | null> =
+    {
+      display_name: "verified",
+      entity_name: null,
+      entity_jurisdiction: null,
+      foundation_member: "verified",
+      validator_status: null,
+      website_url: "verified",
+      contact_url: null,
+      description: src.description
+        ? "verified"
+        : "self_reported",
+      status: null,
+      network: null,
+      canton_sdk_version: null,
+      last_verified_activity: null,
+      launch_date: null,
+      featured_app: null,
+      open_source: null,
+      repo_url: null,
+      license_type: null,
+      security_audit: null,
+      has_tests: null,
+      test_count: null,
+      has_ci: null,
+      ci_status: null,
+      has_documentation: "verified",
+      documentation_url: null,
+      tech_stack: null,
+      tx_count_30d: null,
+      tx_count_90d: null,
+      unique_parties_30d: null,
+      cc_burned_30d: null,
+      featured_markers_30d: null,
+      onchain_since: null,
+    };
 
   return {
-    project_id: projectId,
+    project_id: sanitizeSlug(src.slug),
     display_name: src.name,
     entity_name: null,
     entity_jurisdiction: null,
-    foundation_member: false,
+    foundation_member: src.foundation_member,
     validator_status: "none",
-    website_url: src.url,
+    website_url: src.source_url,
     contact_url: null,
-    description: src.description.substring(0, 280),
-    category: [category],
+    description,
+    category: categories,
     partnerships: [],
     status: "unknown",
     network: [],
     canton_sdk_version: null,
     last_verified_activity: null,
     launch_date: null,
-    featured_app: src.featuredApp ?? null,
-    open_source: src.openSource,
-    repo_url: src.github,
+    featured_app: null,
+    open_source: false,
+    repo_url: null,
     license_type: null,
     security_audit: null,
     has_tests: null,
     test_count: null,
     has_ci: null,
     ci_status: null,
-    has_documentation: src.url !== null,
+    has_documentation: true,
     documentation_url: null,
-    tech_stack: src.stack,
+    tech_stack: [],
     tx_count_30d: null,
     tx_count_90d: null,
     unique_parties_30d: null,
@@ -150,12 +155,12 @@ function convertProject(
     onchain_since: null,
     created_at: now,
     updated_at: now,
-    claimed: src.cantonFoundry,
-    claimed_by: src.cantonFoundry ? "canton-foundry" : null,
-    claimed_at: src.cantonFoundry ? now : null,
+    claimed: false,
+    claimed_by: null,
+    claimed_at: null,
     data_confidence: confidence,
     last_auto_refresh: null,
-    notes: null,
+    notes: src.data_note || null,
   };
 }
 
@@ -172,7 +177,7 @@ function main(): void {
   console.log(`Reading source: ${sourcePath}`);
   const raw = readFileSync(sourcePath, "utf-8");
   const source = JSON.parse(raw) as {
-    projects: EcosystemProject[];
+    projects: CantonNetworkProject[];
   };
 
   const now = new Date().toISOString();

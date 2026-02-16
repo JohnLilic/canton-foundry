@@ -278,19 +278,20 @@
     "Category": {
       "type": "string",
       "enum": [
-        "defi",
-        "tokenization",
+        "tokenized-assets",
+        "data-analytics",
+        "naas",
+        "developer-tools",
         "wallets",
-        "devtools",
-        "analytics",
-        "infrastructure",
-        "bridges",
-        "ai",
+        "exchanges",
+        "liquidity",
+        "interoperability",
+        "forensics-security",
+        "custody",
+        "stablecoins",
         "payments",
-        "identity",
-        "lending",
-        "dex",
-        "naas"
+        "financing",
+        "compliance"
       ]
     }
   }
