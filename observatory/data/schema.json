@@ -1,0 +1,297 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canton Ecosystem Observatory Dataset",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/ObservatoryProject"
+  },
+  "definitions": {
+    "ObservatoryProject": {
+      "type": "object",
+      "required": [
+        "project_id",
+        "display_name",
+        "entity_name",
+        "entity_jurisdiction",
+        "foundation_member",
+        "validator_status",
+        "website_url",
+        "contact_url",
+        "description",
+        "category",
+        "partnerships",
+        "status",
+        "network",
+        "canton_sdk_version",
+        "last_verified_activity",
+        "launch_date",
+        "featured_app",
+        "open_source",
+        "repo_url",
+        "license_type",
+        "security_audit",
+        "has_tests",
+        "test_count",
+        "has_ci",
+        "ci_status",
+        "has_documentation",
+        "documentation_url",
+        "tech_stack",
+        "tx_count_30d",
+        "tx_count_90d",
+        "unique_parties_30d",
+        "cc_burned_30d",
+        "featured_markers_30d",
+        "onchain_since",
+        "created_at",
+        "updated_at",
+        "claimed",
+        "claimed_by",
+        "claimed_at",
+        "data_confidence",
+        "last_auto_refresh",
+        "notes"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]*[a-z0-9]$|^[a-z0-9]$",
+          "maxLength": 100
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "entity_name": {
+          "type": ["string", "null"]
+        },
+        "entity_jurisdiction": {
+          "type": ["string", "null"],
+          "pattern": "^[A-Z]{2}$"
+        },
+        "foundation_member": {
+          "type": "boolean"
+        },
+        "validator_status": {
+          "type": "string",
+          "enum": [
+            "super_validator",
+            "validator",
+            "app_provider",
+            "none"
+          ]
+        },
+        "website_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "contact_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 280
+        },
+        "category": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/Category"
+          }
+        },
+        "partnerships": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "production",
+            "testnet",
+            "development",
+            "inactive",
+            "unknown"
+          ]
+        },
+        "network": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["mainnet", "devnet"]
+          }
+        },
+        "canton_sdk_version": {
+          "type": ["string", "null"]
+        },
+        "last_verified_activity": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "launch_date": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "featured_app": {
+          "type": ["boolean", "null"]
+        },
+        "open_source": {
+          "type": "boolean"
+        },
+        "repo_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "license_type": {
+          "type": ["string", "null"]
+        },
+        "security_audit": {
+          "oneOf": [
+            { "$ref": "#/definitions/SecurityAudit" },
+            { "type": "null" }
+          ]
+        },
+        "has_tests": {
+          "type": ["boolean", "null"]
+        },
+        "test_count": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "has_ci": {
+          "type": ["boolean", "null"]
+        },
+        "ci_status": {
+          "type": ["string", "null"],
+          "enum": [
+            "passing",
+            "failing",
+            "stale",
+            "unknown",
+            null
+          ]
+        },
+        "has_documentation": {
+          "type": "boolean"
+        },
+        "documentation_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "tech_stack": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tx_count_30d": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "tx_count_90d": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "unique_parties_30d": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "cc_burned_30d": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "featured_markers_30d": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "onchain_since": {
+          "type": ["string", "null"],
+          "format": "date"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "claimed": {
+          "type": "boolean"
+        },
+        "claimed_by": {
+          "type": ["string", "null"]
+        },
+        "claimed_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "data_confidence": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "null"],
+            "enum": [
+              "verified",
+              "self_reported",
+              "auto_detected",
+              null
+            ]
+          }
+        },
+        "last_auto_refresh": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "SecurityAudit": {
+      "type": "object",
+      "required": ["auditor", "date", "report_url", "scope"],
+      "additionalProperties": false,
+      "properties": {
+        "auditor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "report_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "Category": {
+      "type": "string",
+      "enum": [
+        "defi",
+        "tokenization",
+        "wallets",
+        "devtools",
+        "analytics",
+        "infrastructure",
+        "bridges",
+        "ai",
+        "payments",
+        "identity",
+        "lending",
+        "dex",
+        "naas"
+      ]
+    }
+  }
+}

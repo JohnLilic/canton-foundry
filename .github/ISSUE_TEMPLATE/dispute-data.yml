@@ -1,0 +1,34 @@
+name: Dispute a Data Point
+description: Challenge data you believe is inaccurate
+labels: ["observatory", "dispute"]
+body:
+  - type: input
+    id: project_id
+    attributes:
+      label: Project affected
+    validations:
+      required: true
+  - type: input
+    id: field_name
+    attributes:
+      label: Field disputed
+    validations:
+      required: true
+  - type: input
+    id: current_value
+    attributes:
+      label: Current value in Observatory
+    validations:
+      required: true
+  - type: input
+    id: correct_value
+    attributes:
+      label: Value you believe is correct
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence supporting your dispute
+    validations:
+      required: true

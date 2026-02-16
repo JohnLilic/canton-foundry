@@ -1,0 +1,28 @@
+name: Claim a Project
+description: Verify your authority to manage a project's Observatory data
+labels: ["observatory", "claim"]
+body:
+  - type: input
+    id: project_id
+    attributes:
+      label: Project ID
+      description: The project_id from the Observatory (e.g., "canton-patterns")
+    validations:
+      required: true
+  - type: dropdown
+    id: verification_method
+    attributes:
+      label: How will you verify your identity?
+      options:
+        - GitHub repo admin (I'll create .canton-observatory-claim file)
+        - Domain ownership (I'll add DNS TXT record)
+        - Canton Foundation referral
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Link to your repo/domain, or name of Foundation member who can vouch
+    validations:
+      required: true

@@ -1,0 +1,39 @@
+name: Submit or Update Data
+description: Provide data for a claimed project
+labels: ["observatory", "data-update"]
+body:
+  - type: input
+    id: project_id
+    attributes:
+      label: Project ID
+    validations:
+      required: true
+  - type: input
+    id: field_name
+    attributes:
+      label: Field to update
+      description: "Exact field name from the data model (e.g., entity_jurisdiction, test_count)"
+    validations:
+      required: true
+  - type: input
+    id: new_value
+    attributes:
+      label: New value
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: URL, document, or explanation supporting this value
+    validations:
+      required: true
+  - type: dropdown
+    id: requested_tier
+    attributes:
+      label: Requested confidence tier
+      options:
+        - Verified (I have public evidence)
+        - Self-Reported (no public evidence available)
+    validations:
+      required: true
